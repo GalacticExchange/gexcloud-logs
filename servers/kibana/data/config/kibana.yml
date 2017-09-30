@@ -1,0 +1,12 @@
+---
+# Default Kibana configuration from kibana-docker.
+
+server.port: 5601
+server.host: "0.0.0.0"
+elasticsearch.url: http://elasticsearch:9200
+
+#kibana_index: ".dashboard" # if dafault index ".kibana" not needed
+
+#elasticsearch.username: elasticsearch
+#elasticsearch.password:
+#xpack.monitoring.ui.container.elasticsearch.enabled: true

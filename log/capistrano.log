@@ -1,0 +1,2078 @@
+# Logfile created on 2017-06-28 13:04:19 +0300 by logger.rb/47272
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-28 13:04:19 +0300 cap main servers:rerun[logs-fluentd-docker-containers,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [07fc24dc] Running ~/.rvm/bin/rvm version as gex@51.1.0.50
+ DEBUG [07fc24dc] Command: ~/.rvm/bin/rvm version
+ DEBUG [07fc24dc] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [07fc24dc] Finished in 0.463 seconds with exit status 0 (successful).
+ DEBUG [1da05fc4] Running ~/.rvm/bin/rvm current as gex@51.1.0.50
+ DEBUG [1da05fc4] Command: ~/.rvm/bin/rvm current
+ DEBUG [1da05fc4] 	ruby-2.3.3
+ DEBUG [1da05fc4] Finished in 0.221 seconds with exit status 0 (successful).
+ DEBUG [bd5feb47] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@51.1.0.50
+ DEBUG [bd5feb47] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [bd5feb47] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [bd5feb47] Finished in 0.370 seconds with exit status 0 (successful).
+ DEBUG [6f30dc03] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@51.1.0.50
+ DEBUG [6f30dc03] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [6f30dc03] Finished in 0.214 seconds with exit status 0 (successful).
+  INFO [33d21bbe] Running /usr/bin/env hostname as gex@51.1.0.50
+ DEBUG [33d21bbe] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [33d21bbe] 	gexsrv
+  INFO [33d21bbe] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [9e58d39b] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-docker-containers ' as gex@51.1.0.50
+ DEBUG [9e58d39b] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-docker-containers '
+ DEBUG [9e58d39b] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container logs-fluentd-docker-containers...
+running: docker rm -f gexlogs-logs-fluentd-docker-containers 
+ DEBUG [9e58d39b] 	gexlogs-logs-fluentd-docker-containers
+creating and running container..
+destroying container logs-fluentd-docker-containers...
+running: docker rm -f gexlogs-logs-fluentd-docker-containers 
+ DEBUG [9e58d39b] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [9e58d39b] 	
+running: docker create --name gexlogs-logs-fluentd-docker-containers --net bridge  -p 24226:24226     --cap-add=NET_ADMIN -h logs-fluentd-docker-containers --dns=8.8.8.8   -e FLUENTD=fluentd -e FLUENTD_CONF_DIR=/fluentd/etc -e FLUENTD_CONF=/fluent.conf gexlogs-logs-fluentd-docker-containers /etc/bootstrap 
+ DEBUG [9e58d39b] 	576ec37c43647f4d5d060736f2c9d920985f0fb6c2b17a0369a6f20587d1c00a
+running: docker network connect --ip 51.0.20.4  overlay gexlogs-logs-fluentd-docker-containers
+ DEBUG [9e58d39b] 	
+running: docker start gexlogs-logs-fluentd-docker-containers
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-28 13:04:36 +0300 cap main servers:rerun[logs-fluentd-docker-containers,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [550a9ae8] Running ~/.rvm/bin/rvm version as gex@51.1.0.50
+ DEBUG [550a9ae8] Command: ~/.rvm/bin/rvm version
+ DEBUG [550a9ae8] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [550a9ae8] Finished in 0.540 seconds with exit status 0 (successful).
+ DEBUG [bcaefdae] Running ~/.rvm/bin/rvm current as gex@51.1.0.50
+ DEBUG [bcaefdae] Command: ~/.rvm/bin/rvm current
+ DEBUG [bcaefdae] 	ruby-2.3.3
+ DEBUG [bcaefdae] Finished in 0.330 seconds with exit status 0 (successful).
+ DEBUG [72af6b7e] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@51.1.0.50
+ DEBUG [72af6b7e] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [72af6b7e] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [72af6b7e] Finished in 0.512 seconds with exit status 0 (successful).
+ DEBUG [f5c753a1] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@51.1.0.50
+ DEBUG [f5c753a1] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [f5c753a1] Finished in 0.239 seconds with exit status 0 (successful).
+  INFO [1dd4dba6] Running /usr/bin/env hostname as gex@51.1.0.50
+ DEBUG [1dd4dba6] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [1dd4dba6] 	gexsrv
+  INFO [1dd4dba6] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [2e61a14b] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-docker-containers ' as gex@51.1.0.50
+ DEBUG [2e61a14b] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-docker-containers '
+ DEBUG [2e61a14b] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container logs-fluentd-docker-containers...
+running: docker rm -f gexlogs-logs-fluentd-docker-containers 
+ DEBUG [2e61a14b] 	gexlogs-logs-fluentd-docker-containers
+creating and running container..
+destroying container logs-fluentd-docker-containers...
+running: docker rm -f gexlogs-logs-fluentd-docker-containers 
+ DEBUG [2e61a14b] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [2e61a14b] 	
+running: docker create --name gexlogs-logs-fluentd-docker-containers --net bridge  -p 24226:24226     --cap-add=NET_ADMIN -h logs-fluentd-docker-containers --dns=8.8.8.8   -e FLUENTD=fluentd -e FLUENTD_CONF_DIR=/fluentd/etc -e FLUENTD_CONF=/fluent.conf gexlogs-logs-fluentd-docker-containers /etc/bootstrap 
+ DEBUG [2e61a14b] 	e9547150b2e69306c5a02476a84a1c79d2fcbfef50c2435bfa728aae05d3e83b
+running: docker network connect --ip 51.0.20.4  overlay gexlogs-logs-fluentd-docker-containers
+ DEBUG [2e61a14b] 	
+running: docker start gexlogs-logs-fluentd-docker-containers
+ DEBUG [2e61a14b] 	gexlogs-logs-fluentd-docker-containers
+ DEBUG [2e61a14b] 	running: docker exec gexlogs-logs-fluentd-docker-containers sh -c 'echo "46.172.71.53 git.gex" >>  /etc/hosts'
+ DEBUG [2e61a14b] 	
+running: docker exec gexlogs-logs-fluentd-docker-containers sh -c 'echo "51.0.20.9 kafka" >>  /etc/hosts'
+ DEBUG [2e61a14b] 	
+  INFO [2e61a14b] Finished in 2.890 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:12:12 +0300 cap aws gexcloud:deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8bceeefc] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [8bceeefc] Command: ~/.rvm/bin/rvm version
+ DEBUG [8bceeefc] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [8bceeefc] Finished in 4.403 seconds with exit status 0 (successful).
+ DEBUG [fd7632a5] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [fd7632a5] Command: ~/.rvm/bin/rvm current
+ DEBUG [fd7632a5] 	ruby-2.3.3
+ DEBUG [fd7632a5] Finished in 0.857 seconds with exit status 0 (successful).
+ DEBUG [828896e0] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [828896e0] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [828896e0] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [828896e0] Finished in 0.969 seconds with exit status 0 (successful).
+ DEBUG [ba0b44e7] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [ba0b44e7] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [ba0b44e7] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [ba0b44e7] Finished in 0.806 seconds with exit status 0 (successful).
+  INFO [2db1d74c] Running cd /disk2/servers-gexcloud-logs && git fetch && git reset --hard origin/master as gex@52.65.97.4
+ DEBUG [2db1d74c] Command: cd /disk2/servers-gexcloud-logs && git fetch && git reset --hard origin/master
+ DEBUG [2db1d74c] 	bash: line 0: cd: /disk2/servers-gexcloud-logs: No such file or directory
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:14:51 +0300 cap aws gexcloud:deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c72ca165] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [c72ca165] Command: ~/.rvm/bin/rvm version
+ DEBUG [c72ca165] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [c72ca165] Finished in 4.263 seconds with exit status 0 (successful).
+ DEBUG [b1d1d897] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [b1d1d897] Command: ~/.rvm/bin/rvm current
+ DEBUG [b1d1d897] 	ruby-2.3.3
+ DEBUG [b1d1d897] Finished in 0.834 seconds with exit status 0 (successful).
+ DEBUG [f491d0ac] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [f491d0ac] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [f491d0ac] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [f491d0ac] Finished in 0.950 seconds with exit status 0 (successful).
+ DEBUG [7a4cb4fc] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [7a4cb4fc] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [7a4cb4fc] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [7a4cb4fc] Finished in 0.671 seconds with exit status 0 (successful).
+  INFO [b8601a07] Running cd /disk2/servers-gexcloud-logs && git fetch && git reset --hard origin/master as gex@52.65.97.4
+ DEBUG [b8601a07] Command: cd /disk2/servers-gexcloud-logs && git fetch && git reset --hard origin/master
+ DEBUG [b8601a07] 	HEAD is now at 5607f53 config
+  INFO [b8601a07] Finished in 6.134 seconds with exit status 0 (successful).
+ DEBUG [5892d215] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [5892d215] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [5892d215] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [5892d215] Finished in 0.994 seconds with exit status 0 (successful).
+ DEBUG Uploading config.aws.rb 0.0%
+  INFO Uploading config.aws.rb 100.0%
+ DEBUG Uploading config_lib.rb 0.0%
+  INFO Uploading config_lib.rb 100.0%
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:15:56 +0300 cap aws servers:start[elasticsearch,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d608512d] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [d608512d] Command: ~/.rvm/bin/rvm version
+ DEBUG [d608512d] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [d608512d] Finished in 4.383 seconds with exit status 0 (successful).
+ DEBUG [9bcd9352] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [9bcd9352] Command: ~/.rvm/bin/rvm current
+ DEBUG [9bcd9352] 	ruby-2.3.3
+ DEBUG [9bcd9352] Finished in 0.855 seconds with exit status 0 (successful).
+ DEBUG [4faf1061] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [4faf1061] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [4faf1061] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [4faf1061] Finished in 0.969 seconds with exit status 0 (successful).
+ DEBUG [91425b38] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [91425b38] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [91425b38] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [91425b38] Finished in 0.804 seconds with exit status 0 (successful).
+  INFO [ac94bf77] Running bash --login -c 'cd /disk2/servers-gexcloud-logs && docker-builder start -s elasticsearch ' as gex@52.65.97.4
+ DEBUG [ac94bf77] Command: bash --login -c 'cd /disk2/servers-gexcloud-logs && docker-builder start -s elasticsearch '
+ DEBUG [ac94bf77] 	Docker builder v.0.1.58
+starting...
+config file: /disk2/servers-gexcloud-logs/config.rb
+running: docker start gexlogs-elasticsearch
+ DEBUG [ac94bf77] 	Error response from daemon: No such container: gexlogs-elasticsearch
+ DEBUG [ac94bf77] 	Error: failed to start containers: gexlogs-elasticsearch
+ DEBUG [ac94bf77] 	
+ DEBUG [ac94bf77] 	Error response from daemon: No such container: gexlogs-elasticsearch
+ DEBUG [ac94bf77] 	Error response from daemon: No such container: gexlogs-elasticsearch
+ DEBUG [ac94bf77] 	Error response from daemon: No such container: gexlogs-elasticsearch
+ DEBUG [ac94bf77] 	Error response from daemon: No such container: gexlogs-elasticsearch
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:17:00 +0300 cap aws servers:rerun[elasticsearch,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [58805b3a] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [58805b3a] Command: ~/.rvm/bin/rvm version
+ DEBUG [58805b3a] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [58805b3a] Finished in 4.339 seconds with exit status 0 (successful).
+ DEBUG [c1aa192a] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [c1aa192a] Command: ~/.rvm/bin/rvm current
+ DEBUG [c1aa192a] 	ruby-2.3.3
+ DEBUG [c1aa192a] Finished in 0.846 seconds with exit status 0 (successful).
+ DEBUG [68c4f242] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [68c4f242] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [68c4f242] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [68c4f242] Finished in 0.963 seconds with exit status 0 (successful).
+ DEBUG [2165a9b7] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [2165a9b7] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [2165a9b7] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [2165a9b7] Finished in 4.503 seconds with exit status 0 (successful).
+  INFO [da6899a8] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [da6899a8] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [da6899a8] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [da6899a8] 	ip-10-170-157-255
+  INFO [da6899a8] Finished in 0.717 seconds with exit status 0 (successful).
+  INFO [f83934fa] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s elasticsearch ' as gex@52.65.97.4
+ DEBUG [f83934fa] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s elasticsearch '
+ DEBUG [f83934fa] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container elasticsearch...
+running: docker rm -f gexlogs-elasticsearch 
+ DEBUG [f83934fa] 	Error response from daemon: No such container: gexlogs-elasticsearch
+ DEBUG [f83934fa] 	
+creating and running container..
+destroying container elasticsearch...
+running: docker rm -f gexlogs-elasticsearch 
+ DEBUG [f83934fa] 	Error response from daemon: No such container: gexlogs-elasticsearch
+ DEBUG [f83934fa] 	
+running: docker create --name gexlogs-elasticsearch --net bridge   -v /disk2/servers-gexcloud-logs/servers/elasticsearch/data/config:/usr/share/elasticsearch/config -v /disk2/data/containers-gexcloud-logs/elasticsearch/data:/usr/share/elasticsearch/data -v /disk2/data/containers-gexcloud-logs/elasticsearch/elasticsearch_logs:/usr/share/elasticsearch/logs    --cap-add=NET_ADMIN -h elasticsearch --dns=8.8.8.8    elasticsearch:2.3.5  
+ DEBUG [f83934fa] 	bd5f550e30d2df6ae0dc5c6cc19c897a95b1a1feb43ef80ccf92973b69b26b25
+running: docker network connect --ip 51.0.20.6  overlay gexlogs-elasticsearch
+ DEBUG [f83934fa] 	
+running: docker start gexlogs-elasticsearch
+ DEBUG [f83934fa] 	gexlogs-elasticsearch
+  INFO [f83934fa] Finished in 1.568 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:20:45 +0300 cap aws servers:rerun[elasticsearch,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e2632a02] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [e2632a02] Command: ~/.rvm/bin/rvm version
+ DEBUG [e2632a02] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [e2632a02] Finished in 6.561 seconds with exit status 0 (successful).
+ DEBUG [9a71d20a] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [9a71d20a] Command: ~/.rvm/bin/rvm current
+ DEBUG [9a71d20a] 	ruby-2.3.3
+ DEBUG [9a71d20a] Finished in 0.876 seconds with exit status 0 (successful).
+ DEBUG [64874374] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [64874374] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [64874374] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [64874374] Finished in 0.993 seconds with exit status 0 (successful).
+ DEBUG [5d8a765f] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [5d8a765f] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [5d8a765f] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [5d8a765f] Finished in 4.288 seconds with exit status 0 (successful).
+  INFO [df046f87] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [df046f87] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [df046f87] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [df046f87] 	ip-10-170-157-255
+  INFO [df046f87] Finished in 0.702 seconds with exit status 0 (successful).
+  INFO [64949dc2] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s elasticsearch ' as gex@52.65.97.4
+ DEBUG [64949dc2] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s elasticsearch '
+ DEBUG [64949dc2] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container elasticsearch...
+running: docker rm -f gexlogs-elasticsearch 
+ DEBUG [64949dc2] 	gexlogs-elasticsearch
+creating and running container..
+destroying container elasticsearch...
+running: docker rm -f gexlogs-elasticsearch 
+ DEBUG [64949dc2] 	Error response from daemon: No such container: gexlogs-elasticsearch
+ DEBUG [64949dc2] 	
+running: docker create --name gexlogs-elasticsearch --net bridge   -v /disk2/servers-gexcloud-logs/servers/elasticsearch/data/config:/usr/share/elasticsearch/config -v /disk2/data/containers-gexcloud-logs/elasticsearch/data:/usr/share/elasticsearch/data -v /disk2/data/containers-gexcloud-logs/elasticsearch/elasticsearch_logs:/usr/share/elasticsearch/logs    --cap-add=NET_ADMIN -h elasticsearch --dns=8.8.8.8    elasticsearch:2.3.5  
+ DEBUG [64949dc2] 	702d08150bf993105a35fcae93a981122a1a0ed77688d30a6874c62015ce6b30
+running: docker network connect --ip 51.0.20.6  overlay gexlogs-elasticsearch
+ DEBUG [64949dc2] 	
+running: docker start gexlogs-elasticsearch
+ DEBUG [64949dc2] 	gexlogs-elasticsearch
+  INFO [64949dc2] Finished in 1.879 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:21:01 +0300 cap aws servers:rerun[zookeeper,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [0d098004] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [0d098004] Command: ~/.rvm/bin/rvm version
+ DEBUG [0d098004] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [0d098004] Finished in 4.259 seconds with exit status 0 (successful).
+ DEBUG [a3e6669d] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [a3e6669d] Command: ~/.rvm/bin/rvm current
+ DEBUG [a3e6669d] 	ruby-2.3.3
+ DEBUG [a3e6669d] Finished in 0.836 seconds with exit status 0 (successful).
+ DEBUG [865c3c1b] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [865c3c1b] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [865c3c1b] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [865c3c1b] Finished in 0.942 seconds with exit status 0 (successful).
+ DEBUG [e66f4a85] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [e66f4a85] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [e66f4a85] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [e66f4a85] Finished in 4.289 seconds with exit status 0 (successful).
+  INFO [633ae06d] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [633ae06d] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [633ae06d] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [633ae06d] 	ip-10-170-157-255
+  INFO [633ae06d] Finished in 0.704 seconds with exit status 0 (successful).
+  INFO [4bdd337d] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s zookeeper ' as gex@52.65.97.4
+ DEBUG [4bdd337d] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s zookeeper '
+ DEBUG [4bdd337d] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container zookeeper...
+running: docker rm -f gexlogs-zookeeper 
+ DEBUG [4bdd337d] 	Error response from daemon: No such container: gexlogs-zookeeper
+ DEBUG [4bdd337d] 	
+creating and running container..
+destroying container zookeeper...
+running: docker rm -f gexlogs-zookeeper 
+ DEBUG [4bdd337d] 	Error response from daemon: No such container: gexlogs-zookeeper
+ DEBUG [4bdd337d] 	
+running: docker create --name gexlogs-zookeeper --net bridge       --cap-add=NET_ADMIN -h zookeeper --dns=8.8.8.8    zookeeper:3.4.9  
+ DEBUG [4bdd337d] 	f38cbbb79dff7b13fb6ec5852fff5e0b2b065b1bac080a5126e39c61b4dd9a27
+running: docker network connect --ip 51.0.20.8  overlay gexlogs-zookeeper
+ DEBUG [4bdd337d] 	
+running: docker start gexlogs-zookeeper
+ DEBUG [4bdd337d] 	gexlogs-zookeeper
+  INFO [4bdd337d] Finished in 1.561 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:21:14 +0300 cap aws servers:rerun[kibana,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [130150da] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [130150da] Command: ~/.rvm/bin/rvm version
+ DEBUG [130150da] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [130150da] Finished in 4.462 seconds with exit status 0 (successful).
+ DEBUG [2f486c7a] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [2f486c7a] Command: ~/.rvm/bin/rvm current
+ DEBUG [2f486c7a] 	ruby-2.3.3
+ DEBUG [2f486c7a] Finished in 0.867 seconds with exit status 0 (successful).
+ DEBUG [30f5d467] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [30f5d467] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [30f5d467] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [30f5d467] Finished in 0.976 seconds with exit status 0 (successful).
+ DEBUG [e8155fd4] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [e8155fd4] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [e8155fd4] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [e8155fd4] Finished in 4.262 seconds with exit status 0 (successful).
+  INFO [001312cb] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [001312cb] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [001312cb] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [001312cb] 	ip-10-170-157-255
+  INFO [001312cb] Finished in 0.699 seconds with exit status 0 (successful).
+  INFO [c1898f57] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s kibana ' as gex@52.65.97.4
+ DEBUG [c1898f57] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s kibana '
+ DEBUG [c1898f57] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container kibana...
+running: docker rm -f gexlogs-kibana 
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	
+creating and running container..
+destroying container kibana...
+running: docker rm -f gexlogs-kibana 
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	
+running: docker create --name gexlogs-kibana --net bridge   -v /disk2/data/containers-gexcloud-logs/kibana/data:/usr/share/kibana/data    --cap-add=NET_ADMIN -h kibana --dns=8.8.8.8    gexlogs-kibana /etc/bootstrap 
+ DEBUG [c1898f57] 	Unable to find image 'gexlogs-kibana:latest' locally
+ DEBUG [c1898f57] 	Error response from daemon: repository gexlogs-kibana not found: does not exist or no pull access
+ DEBUG [c1898f57] 	
+running: docker network connect --ip 51.0.20.7  overlay gexlogs-kibana
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	
+running: docker start gexlogs-kibana
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	Error: failed to start containers: gexlogs-kibana
+ DEBUG [c1898f57] 	
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [c1898f57] 	/home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:371:in `throw'
+ DEBUG [c1898f57] 	: uncaught throw #<Exception: Container gexlogs-kibana is not running> (UncaughtThrowError)
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:371:in `assert'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:148:in `assert_container_running'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:143:in `wait_until_running'
+ DEBUG [c1898f57] 		from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:122:in `start_container'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:48:in `run_container'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/cli.rb:175:in `block in up'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/cli.rb:167:in `each'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/cli.rb:167:in `up'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/thor-0.19.4/lib/thor.rb:369:in `dispatch'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/thor-0.19.4/lib/thor/base.rb:444:in `start'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/exe/docker-builder:20:in `<top (required)>'
+	from /home/gex/.rvm/gems/ruby-2.3.3/bin/docker-builder:22:in `load'
+	from /home/gex/.rvm/gems/ruby-2.3.3/bin/docker-builder:22:in `<main>'
+	from /home/gex/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `eval'
+	from /home/gex/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [c1898f57] 	exception: #<UncaughtThrowError: uncaught throw #<Exception: Container gexlogs-kibana is not running>>
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:21:41 +0300 cap aws servers:rerun[kafka,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [caf09274] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [caf09274] Command: ~/.rvm/bin/rvm version
+ DEBUG [caf09274] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [caf09274] Finished in 4.336 seconds with exit status 0 (successful).
+ DEBUG [6a43fdb9] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [6a43fdb9] Command: ~/.rvm/bin/rvm current
+ DEBUG [6a43fdb9] 	ruby-2.3.3
+ DEBUG [6a43fdb9] Finished in 0.848 seconds with exit status 0 (successful).
+ DEBUG [7b726751] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [7b726751] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [7b726751] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [7b726751] Finished in 0.961 seconds with exit status 0 (successful).
+ DEBUG [a50dd8cd] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [a50dd8cd] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [a50dd8cd] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [a50dd8cd] Finished in 4.428 seconds with exit status 0 (successful).
+  INFO [0f54545c] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [0f54545c] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [0f54545c] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [0f54545c] 	ip-10-170-157-255
+  INFO [0f54545c] Finished in 0.726 seconds with exit status 0 (successful).
+  INFO [b6023df6] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s kafka ' as gex@52.65.97.4
+ DEBUG [b6023df6] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s kafka '
+ DEBUG [b6023df6] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container kafka...
+running: docker rm -f gexlogs-kafka 
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	
+creating and running container..
+destroying container kafka...
+running: docker rm -f gexlogs-kafka 
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	
+running: docker create --name gexlogs-kafka --net bridge   -v /var/run/docker.sock:/var/run/docker.sock -v /disk2/data/containers-gexcloud-logs/kafka/data:/kafka    --cap-add=NET_ADMIN -h kafka --dns=8.8.8.8   -e KAFKA_BROKER_ID=88 -e KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://51.0.20.9:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -e KAFKA_LOG_DIRS=/kafka/kafka-logs gexlogs-kafka  
+ DEBUG [b6023df6] 	Unable to find image 'gexlogs-kafka:latest' locally
+ DEBUG [b6023df6] 	Error response from daemon: repository gexlogs-kafka not found: does not exist or no pull access
+ DEBUG [b6023df6] 	
+running: docker network connect --ip 51.0.20.9  overlay gexlogs-kafka
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	
+running: docker start gexlogs-kafka
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	Error: failed to start containers: gexlogs-kafka
+ DEBUG [b6023df6] 	
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [b6023df6] 	/home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:371:in `throw': uncaught throw #<Exception: Container gexlogs-kafka is not running> (UncaughtThrowError)
+ DEBUG [b6023df6] 		from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:371:in `assert'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:148:in `assert_container_running'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:143:in `wait_until_running'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:122:in `start_container'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:48:in `run_container'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/cli.rb:175:in `block in up'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/cli.rb:167:in `each'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/cli.rb:167:in `up'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/thor-0.19.4/lib/thor.rb:369:in `dispatch'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/thor-0.19.4/lib/thor/base.rb:444:in `start'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/exe/docker-builder:20:in `<top (required)>'
+ DEBUG [b6023df6] 		from /home/gex/.rvm/gems/ruby-2.3.3/bin/docker-builder:22:in `load'
+	from /home/gex/.rvm/gems/ruby-2.3.3/bin/docker-builder:22:in `<main>'
+	from /home/gex/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `eval'
+	from /home/gex/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [b6023df6] 	exception: #<UncaughtThrowError: uncaught throw #<Exception: Container gexlogs-kafka is not running>>
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:22:07 +0300 cap aws servers:rerun[logs-fluentd-docker-containers,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8383cb48] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [8383cb48] Command: ~/.rvm/bin/rvm version
+ DEBUG [8383cb48] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [8383cb48] Finished in 4.506 seconds with exit status 0 (successful).
+ DEBUG [389fcfc9] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [389fcfc9] Command: ~/.rvm/bin/rvm current
+ DEBUG [389fcfc9] 	ruby-2.3.3
+ DEBUG [389fcfc9] Finished in 0.878 seconds with exit status 0 (successful).
+ DEBUG [970e8a2a] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [970e8a2a] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [970e8a2a] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [970e8a2a] Finished in 0.990 seconds with exit status 0 (successful).
+ DEBUG [91e6ab58] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [91e6ab58] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [91e6ab58] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [91e6ab58] Finished in 4.188 seconds with exit status 0 (successful).
+  INFO [2c24f5f8] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [2c24f5f8] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [2c24f5f8] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [2c24f5f8] 	ip-10-170-157-255
+  INFO [2c24f5f8] Finished in 0.686 seconds with exit status 0 (successful).
+  INFO [b58ce48c] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-docker-containers ' as gex@52.65.97.4
+ DEBUG [b58ce48c] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-docker-containers '
+ DEBUG [b58ce48c] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container logs-fluentd-docker-containers...
+running: docker rm -f gexlogs-logs-fluentd-docker-containers 
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	
+creating and running container..
+destroying container logs-fluentd-docker-containers...
+running: docker rm -f gexlogs-logs-fluentd-docker-containers 
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	
+running: docker create --name gexlogs-logs-fluentd-docker-containers --net bridge  -p 24226:24226     --cap-add=NET_ADMIN -h logs-fluentd-docker-containers --dns=8.8.8.8   -e FLUENTD=fluentd -e FLUENTD_CONF_DIR=/fluentd/etc -e FLUENTD_CONF=/fluent.conf gexlogs-logs-fluentd-docker-containers /etc/bootstrap 
+ DEBUG [b58ce48c] 	Unable to find image 'gexlogs-logs-fluentd-docker-containers:latest' locally
+ DEBUG [b58ce48c] 	Error response from daemon: repository gexlogs-logs-fluentd-docker-containers not found: does not exist or no pull access
+ DEBUG [b58ce48c] 	
+running: docker network connect --ip 51.0.20.4  overlay gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	
+running: docker start gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error: failed to start containers: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [b58ce48c] 	/home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:371:in `throw': 
+ DEBUG [b58ce48c] 	uncaught throw #<Exception: Container gexlogs-logs-fluentd-docker-containers is not running> (UncaughtThrowError)
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:371:in `assert'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:148:in `assert_container_running'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:143:in `wait_until_running'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:122:in `start_container'
+ DEBUG [b58ce48c] 		from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/manager_container.rb:48:in `run_container'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/cli.rb:175:in `block in up'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/cli.rb:167:in `each'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/lib/docker_builder/cli.rb:167:in `up'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/thor-0.19.4/lib/thor.rb:369:in `dispatch'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/thor-0.19.4/lib/thor/base.rb:444:in `start'
+	from /home/gex/.rvm/gems/ruby-2.3.3/gems/docker-builder-0.1.58/exe/docker-builder:20:in `<top (required)>'
+	from /home/gex/.rvm/gems/ruby-2.3.3/bin/docker-builder:22:in `load'
+	from /home/gex/.rvm/gems/ruby-2.3.3/bin/docker-builder:22:in `<main>'
+	from /home/gex/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `eval'
+	from /home/gex/.rvm/gems/ruby-2.3.3/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [b58ce48c] 	exception: #<UncaughtThrowError: uncaught throw #<Exception: Container gexlogs-logs-fluentd-docker-containers is not running>>
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:22:34 +0300 cap aws servers:rerun[logs-fluentd-servers-kafka-elastic,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [73d574d0] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [73d574d0] Command: ~/.rvm/bin/rvm version
+ DEBUG [73d574d0] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [73d574d0] Finished in 4.485 seconds with exit status 0 (successful).
+ DEBUG [74bfcf42] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [74bfcf42] Command: ~/.rvm/bin/rvm current
+ DEBUG [74bfcf42] 	ruby-2.3.3
+ DEBUG [74bfcf42] Finished in 0.871 seconds with exit status 0 (successful).
+ DEBUG [91a87b32] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [91a87b32] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [91a87b32] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [91a87b32] Finished in 0.985 seconds with exit status 0 (successful).
+ DEBUG [77c971bc] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [77c971bc] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [77c971bc] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [77c971bc] Finished in 4.203 seconds with exit status 0 (successful).
+  INFO [a60847fb] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [a60847fb] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [a60847fb] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [a60847fb] 	ip-10-170-157-255
+  INFO [a60847fb] Finished in 0.689 seconds with exit status 0 (successful).
+  INFO [7833d933] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-servers-kafka-elastic ' as gex@52.65.97.4
+ DEBUG [7833d933] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-servers-kafka-elastic '
+ DEBUG [7833d933] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container logs-fluentd-servers-kafka-elastic...
+running: docker rm -f gexlogs-logs-fluentd-servers-kafka-elastic 
+ DEBUG [7833d933] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	
+creating and running container..
+destroying container logs-fluentd-servers-kafka-elastic...
+running: docker rm -f gexlogs-logs-fluentd-servers-kafka-elastic 
+ DEBUG [7833d933] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	
+running: docker create --name gexlogs-logs-fluentd-servers-kafka-elastic --net bridge       --cap-add=NET_ADMIN -h logs-fluentd-servers-kafka-elastic --dns=8.8.8.8   -e FLUENTD=fluentd -e FLUENTD_CONF_DIR=/fluentd/etc -e FLUENTD_CONF=/fluent.conf gexlogs-logs-fluentd-servers-kafka-elastic /etc/bootstrap 
+ DEBUG [7833d933] 	Unable to find image 'gexlogs-logs-fluentd-servers-kafka-elastic:latest' locally
+ DEBUG [7833d933] 	Error response from daemon: repository gexlogs-logs-fluentd-servers-kafka-elastic not found: does not exist or no pull access
+ DEBUG [7833d933] 	
+running: docker network connect --ip 51.0.20.5  overlay gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	
+running: docker start gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	Error: failed to start containers: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	
+ DEBUG [7833d933] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [7833d933] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:24:56 +0300 cap aws servers:deploy_image[logs-fluentd-docker-containers, 0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [5682896a] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [5682896a] Command: ~/.rvm/bin/rvm version
+ DEBUG [5682896a] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [5682896a] Finished in 4.421 seconds with exit status 0 (successful).
+ DEBUG [14c25967] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [14c25967] Command: ~/.rvm/bin/rvm current
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:25:05 +0300 cap aws servers:deploy_image[logs-fluentd-docker-containers, 0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [b340cee2] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [b340cee2] Command: ~/.rvm/bin/rvm version
+ DEBUG [14c25967] 	ruby-2.3.3
+ DEBUG [14c25967] Finished in 5.400 seconds with exit status 0 (successful).
+ DEBUG [afaedd52] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [afaedd52] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [afaedd52] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [afaedd52] Finished in 1.070 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:25:17 +0300 cap aws servers:deploy_image[logs-fluentd-docker-containers,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [38c3198a] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [38c3198a] Command: ~/.rvm/bin/rvm version
+ DEBUG [38c3198a] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [38c3198a] Finished in 4.484 seconds with exit status 0 (successful).
+ DEBUG [bdd697b0] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [bdd697b0] Command: ~/.rvm/bin/rvm current
+ DEBUG [bdd697b0] 	ruby-2.3.3
+ DEBUG [bdd697b0] Finished in 0.870 seconds with exit status 0 (successful).
+ DEBUG [2ea7f222] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [2ea7f222] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [2ea7f222] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [2ea7f222] Finished in 0.986 seconds with exit status 0 (successful).
+ DEBUG [c38b9f55] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [c38b9f55] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [c38b9f55] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [c38b9f55] Finished in 4.426 seconds with exit status 0 (successful).
+  INFO [99a4f3b8] Running /usr/bin/env docker login --username=gex --password=PH_GEX_PASSWD1 https://dockerhub.gex:5043 as gex@52.65.97.4
+ DEBUG [99a4f3b8] Command: sudo -u gex -- sh -c '/usr/bin/env docker login --username=gex --password=PH_GEX_PASSWD1 https://dockerhub.gex:5043'
+ DEBUG [99a4f3b8] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [99a4f3b8] 	Login Succeeded
+  INFO [99a4f3b8] Finished in 3.533 seconds with exit status 0 (successful).
+  INFO [189c8114] Running /usr/bin/env docker pull dockerhub.gex:5043/gexlogs-logs-fluentd-docker-containers as gex@52.65.97.4
+ DEBUG [189c8114] Command: sudo -u gex -- sh -c '/usr/bin/env docker pull dockerhub.gex:5043/gexlogs-logs-fluentd-docker-containers'
+ DEBUG [189c8114] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [189c8114] 	Using default tag: latest
+ DEBUG [189c8114] 	latest: Pulling from gexlogs-logs-fluentd-docker-containers
+ DEBUG [189c8114] 	c62795f78da9: Already exists
+ DEBUG [189c8114] 	d4fceeeb758e: Already exists
+ DEBUG [189c8114] 	5c9125a401ae: Already exists
+ DEBUG [189c8114] 	0062f774e994: Already exists
+ DEBUG [189c8114] 	6b33fd031fac: Already exists
+ DEBUG [189c8114] 	aa358daf0edf: Pulling fs layer
+7e4d0d099602: Pulling fs layer
+b35f656157f2: Pulling fs layer
+958da7b9276c: Pulling fs layer
+fbecf15ecb98: Pulling fs layer
+61a3b4ec13c3: Pulling fs layer
+5fd4cc859dcb: Pulling fs layer
+2a130440a221: Pulling fs layer
+ad782771bc60: Pulling fs layer
+c6918851b0fb: Pulling fs layer
+ DEBUG [189c8114] 	b07528eabf14: Pulling fs layer
+8b584d5af5c9: Pulling fs layer
+6cd3de171d2c: Pulling fs layer
+11b906638a98: Pulling fs layer
+63c68cb6d8aa: 
+ DEBUG [189c8114] 	Pulling fs layer
+c4162872f0cc: Pulling fs layer
+769afdca8489: Pulling fs layer
+958da7b9276c: Waiting
+f77176b0bc72: Pulling fs layer
+81d958885c90: Pulling fs layer
+fbecf15ecb98: Waiting
+ DEBUG [189c8114] 	06cb8ef6806e: Pulling fs layer
+ DEBUG [189c8114] 	5fd4cc859dcb: Waiting
+ DEBUG [189c8114] 	61a3b4ec13c3: Waiting
+2a130440a221: Waiting
+ DEBUG [189c8114] 	c6918851b0fb: Waiting
+ DEBUG [189c8114] 	8b584d5af5c9: Waiting
+ DEBUG [189c8114] 	ad782771bc60: Waiting
+ DEBUG [189c8114] 	769afdca8489: Waiting
+6cd3de171d2c: Waiting
+ DEBUG [189c8114] 	f77176b0bc72: Waiting
+81d958885c90: Waiting
+06cb8ef6806e: Waiting
+ DEBUG [189c8114] 	11b906638a98: Waiting
+c4162872f0cc: Waiting
+63c68cb6d8aa: Waiting
+ DEBUG [189c8114] 	7e4d0d099602: Verifying Checksum
+7e4d0d099602: Download complete
+ DEBUG [189c8114] 	958da7b9276c: Verifying Checksum
+ DEBUG [189c8114] 	958da7b9276c: Download complete
+ DEBUG [189c8114] 	b35f656157f2: Verifying Checksum
+b35f656157f2: Download complete
+ DEBUG [189c8114] 	fbecf15ecb98: Download complete
+ DEBUG [189c8114] 	5fd4cc859dcb: Verifying Checksum
+5fd4cc859dcb: Download complete
+ DEBUG [189c8114] 	61a3b4ec13c3: Verifying Checksum
+61a3b4ec13c3: Download complete
+ DEBUG [189c8114] 	ad782771bc60: Verifying Checksum
+ad782771bc60: Download complete
+ DEBUG [189c8114] 	c6918851b0fb: Verifying Checksum
+c6918851b0fb: Download complete
+ DEBUG [189c8114] 	b07528eabf14: Verifying Checksum
+b07528eabf14: Download complete
+ DEBUG [189c8114] 	2a130440a221: Verifying Checksum
+2a130440a221: Download complete
+ DEBUG [189c8114] 	8b584d5af5c9: Verifying Checksum
+8b584d5af5c9: Download complete
+ DEBUG [189c8114] 	6cd3de171d2c: Verifying Checksum
+6cd3de171d2c: Download complete
+ DEBUG [189c8114] 	11b906638a98: Download complete
+ DEBUG [189c8114] 	63c68cb6d8aa: Verifying Checksum
+63c68cb6d8aa: Download complete
+ DEBUG [189c8114] 	c4162872f0cc: 
+ DEBUG [189c8114] 	Verifying Checksum
+ DEBUG [189c8114] 	c4162872f0cc: Download complete
+ DEBUG [189c8114] 	769afdca8489: Verifying Checksum
+ DEBUG [189c8114] 	769afdca8489: Download complete
+ DEBUG [189c8114] 	f77176b0bc72: Download complete
+ DEBUG [189c8114] 	81d958885c90: Verifying Checksum
+81d958885c90: Download complete
+ DEBUG [189c8114] 	06cb8ef6806e: Verifying Checksum
+06cb8ef6806e: Download complete
+ DEBUG [189c8114] 	aa358daf0edf: Verifying Checksum
+aa358daf0edf: Download complete
+ DEBUG [189c8114] 	aa358daf0edf: Pull complete
+ DEBUG [189c8114] 	7e4d0d099602: Pull complete
+ DEBUG [189c8114] 	b35f656157f2: Pull complete
+ DEBUG [189c8114] 	958da7b9276c: Pull complete
+ DEBUG [189c8114] 	fbecf15ecb98: Pull complete
+ DEBUG [189c8114] 	61a3b4ec13c3: Pull complete
+ DEBUG [189c8114] 	5fd4cc859dcb: Pull complete
+ DEBUG [189c8114] 	2a130440a221: Pull complete
+ DEBUG [189c8114] 	ad782771bc60: Pull complete
+ DEBUG [189c8114] 	c6918851b0fb: Pull complete
+ DEBUG [189c8114] 	b07528eabf14: Pull complete
+ DEBUG [189c8114] 	8b584d5af5c9: Pull complete
+ DEBUG [189c8114] 	6cd3de171d2c: Pull complete
+ DEBUG [189c8114] 	11b906638a98: Pull complete
+ DEBUG [189c8114] 	63c68cb6d8aa: Pull complete
+ DEBUG [189c8114] 	c4162872f0cc: Pull complete
+ DEBUG [189c8114] 	769afdca8489: Pull complete
+ DEBUG [189c8114] 	f77176b0bc72: Pull complete
+ DEBUG [189c8114] 	81d958885c90: Pull complete
+ DEBUG [189c8114] 	06cb8ef6806e: Pull complete
+ DEBUG [189c8114] 	Digest: sha256:ae17d0be7d3db1eb43af8a1dc9cfd2b082984b013380eac683bd1c810f168847
+ DEBUG [189c8114] 	Status: Downloaded newer image for dockerhub.gex:5043/gexlogs-logs-fluentd-docker-containers:latest
+  INFO [189c8114] Finished in 40.120 seconds with exit status 0 (successful).
+  INFO [5569e68e] Running /usr/bin/env docker tag dockerhub.gex:5043/gexlogs-logs-fluentd-docker-containers gexlogs-logs-fluentd-docker-containers:0.1  as gex@52.65.97.4
+ DEBUG [5569e68e] Command: sudo -u gex -- sh -c '/usr/bin/env docker tag dockerhub.gex:5043/gexlogs-logs-fluentd-docker-containers gexlogs-logs-fluentd-docker-containers:0.1 '
+ DEBUG [5569e68e] 	sudo: unable to resolve host ip-10-170-157-255
+  INFO [5569e68e] Finished in 0.746 seconds with exit status 0 (successful).
+  INFO [2d3c75f5] Running /usr/bin/env docker tag gexlogs-logs-fluentd-docker-containers:0.1 gexlogs-logs-fluentd-docker-containers:latest  as gex@52.65.97.4
+ DEBUG [2d3c75f5] Command: sudo -u gex -- sh -c '/usr/bin/env docker tag gexlogs-logs-fluentd-docker-containers:0.1 gexlogs-logs-fluentd-docker-containers:latest '
+ DEBUG [2d3c75f5] 	sudo: unable to resolve host ip-10-170-157-255
+  INFO [2d3c75f5] Finished in 0.744 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:28:42 +0300 cap aws servers:rerun[logs-fluentd-docker-containers, 0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1f162e9c] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [1f162e9c] Command: ~/.rvm/bin/rvm version
+ DEBUG [1f162e9c] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [1f162e9c] Finished in 4.279 seconds with exit status 0 (successful).
+ DEBUG [f52efedf] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [f52efedf] Command: ~/.rvm/bin/rvm current
+ DEBUG [f52efedf] 	ruby-2.3.3
+ DEBUG [f52efedf] Finished in 0.838 seconds with exit status 0 (successful).
+ DEBUG [bb8ed8ec] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [bb8ed8ec] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [bb8ed8ec] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [bb8ed8ec] Finished in 0.954 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:28:56 +0300 cap aws servers:rerun[logs-fluentd-docker-containers,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [be685371] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [be685371] Command: ~/.rvm/bin/rvm version
+ DEBUG [be685371] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [be685371] Finished in 4.427 seconds with exit status 0 (successful).
+ DEBUG [71de2c3d] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [71de2c3d] Command: ~/.rvm/bin/rvm current
+ DEBUG [71de2c3d] 	ruby-2.3.3
+ DEBUG [71de2c3d] Finished in 0.863 seconds with exit status 0 (successful).
+ DEBUG [abd0db33] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [abd0db33] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [abd0db33] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [abd0db33] Finished in 0.979 seconds with exit status 0 (successful).
+ DEBUG [426b876d] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [426b876d] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [426b876d] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [426b876d] Finished in 4.117 seconds with exit status 0 (successful).
+  INFO [0b1c9fca] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [0b1c9fca] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [0b1c9fca] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [0b1c9fca] 	ip-10-170-157-255
+  INFO [0b1c9fca] Finished in 0.674 seconds with exit status 0 (successful).
+  INFO [4f057657] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-docker-containers ' as gex@52.65.97.4
+ DEBUG [4f057657] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-docker-containers '
+ DEBUG [4f057657] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container logs-fluentd-docker-containers...
+running: docker rm -f gexlogs-logs-fluentd-docker-containers 
+ DEBUG [4f057657] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [4f057657] 	
+creating and running container..
+destroying container logs-fluentd-docker-containers...
+running: docker rm -f gexlogs-logs-fluentd-docker-containers 
+ DEBUG [4f057657] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [4f057657] 	
+running: docker create --name gexlogs-logs-fluentd-docker-containers --net bridge  -p 24226:24226     --cap-add=NET_ADMIN -h logs-fluentd-docker-containers --dns=8.8.8.8   -e FLUENTD=fluentd -e FLUENTD_CONF_DIR=/fluentd/etc -e FLUENTD_CONF=/fluent.conf gexlogs-logs-fluentd-docker-containers /etc/bootstrap 
+ DEBUG [4f057657] 	baea8b174f0c95326244fe412249300d714ec237b793fc7964f13566f44ef30c
+running: docker network connect --ip 51.0.20.4  overlay gexlogs-logs-fluentd-docker-containers
+ DEBUG [4f057657] 	
+running: docker start gexlogs-logs-fluentd-docker-containers
+ DEBUG [4f057657] 	gexlogs-logs-fluentd-docker-containers
+ DEBUG [4f057657] 	running: docker exec gexlogs-logs-fluentd-docker-containers sh -c 'echo "46.172.71.53 git.gex" >>  /etc/hosts'
+ DEBUG [4f057657] 	
+running: docker exec gexlogs-logs-fluentd-docker-containers sh -c 'echo "51.0.20.9 kafka" >>  /etc/hosts'
+ DEBUG [4f057657] 	
+  INFO [4f057657] Finished in 1.705 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:32:21 +0300 cap aws servers:deploy_image[kibana, 0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [b41d4ecf] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [b41d4ecf] Command: ~/.rvm/bin/rvm version
+ DEBUG [b41d4ecf] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [b41d4ecf] Finished in 4.471 seconds with exit status 0 (successful).
+ DEBUG [676eaf7e] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [676eaf7e] Command: ~/.rvm/bin/rvm current
+ DEBUG [676eaf7e] 	ruby-2.3.3
+ DEBUG [676eaf7e] Finished in 0.870 seconds with exit status 0 (successful).
+ DEBUG [a18d4a45] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [a18d4a45] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [a18d4a45] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [a18d4a45] Finished in 0.981 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:32:33 +0300 cap aws servers:deploy_image[kibana,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [81688372] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [81688372] Command: ~/.rvm/bin/rvm version
+ DEBUG [81688372] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [81688372] Finished in 4.312 seconds with exit status 0 (successful).
+ DEBUG [d438d6b1] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [d438d6b1] Command: ~/.rvm/bin/rvm current
+ DEBUG [d438d6b1] 	ruby-2.3.3
+ DEBUG [d438d6b1] Finished in 0.846 seconds with exit status 0 (successful).
+ DEBUG [0b06d781] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [0b06d781] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [0b06d781] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [0b06d781] Finished in 0.958 seconds with exit status 0 (successful).
+ DEBUG [9b10662e] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [9b10662e] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [9b10662e] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [9b10662e] Finished in 4.121 seconds with exit status 0 (successful).
+  INFO [378cd7ad] Running /usr/bin/env docker login --username=gex --password=PH_GEX_PASSWD1 https://dockerhub.gex:5043 as gex@52.65.97.4
+ DEBUG [378cd7ad] Command: sudo -u gex -- sh -c '/usr/bin/env docker login --username=gex --password=PH_GEX_PASSWD1 https://dockerhub.gex:5043'
+ DEBUG [378cd7ad] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [378cd7ad] 	Login Succeeded
+  INFO [378cd7ad] Finished in 3.387 seconds with exit status 0 (successful).
+  INFO [7be34390] Running /usr/bin/env docker pull dockerhub.gex:5043/gexlogs-kibana as gex@52.65.97.4
+ DEBUG [7be34390] Command: sudo -u gex -- sh -c '/usr/bin/env docker pull dockerhub.gex:5043/gexlogs-kibana'
+ DEBUG [7be34390] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [7be34390] 	Using default tag: latest
+ DEBUG [7be34390] 	latest: Pulling from gexlogs-kibana
+ DEBUG [7be34390] 	c62795f78da9: Already exists
+ DEBUG [7be34390] 	d4fceeeb758e: Already exists
+ DEBUG [7be34390] 	5c9125a401ae: Already exists
+ DEBUG [7be34390] 	0062f774e994: Already exists
+ DEBUG [7be34390] 	6b33fd031fac: Already exists
+ DEBUG [7be34390] 	170a5d0e1af1: Already exists
+ DEBUG [7be34390] 	3fe83a02c5bb: Already exists
+ DEBUG [7be34390] 	d72d50929df8: Already exists
+ DEBUG [7be34390] 	fda5cfd2a713: Already exists
+ DEBUG [7be34390] 	6bc0fa931866: Already exists
+ DEBUG [7be34390] 	43010751369f: Already exists
+ DEBUG [7be34390] 	ff4e5cff6172: Already exists
+ DEBUG [7be34390] 	fdcba6fa792a: Pulling fs layer
+d17692b94e27: Pulling fs layer
+b63f120efe11: Pulling fs layer
+7146a42aaa2d: Pulling fs layer
+f4cf59a3d64b: Pulling fs layer
+7146a42aaa2d: Waiting
+ DEBUG [7be34390] 	b63f120efe11: Download complete
+ DEBUG [7be34390] 	d17692b94e27: Download complete
+ DEBUG [7be34390] 	fdcba6fa792a: Download complete
+ DEBUG [7be34390] 	fdcba6fa792a: Pull complete
+ DEBUG [7be34390] 	d17692b94e27: Pull complete
+ DEBUG [7be34390] 	b63f120efe11: Pull complete
+ DEBUG [7be34390] 	7146a42aaa2d: Verifying Checksum
+7146a42aaa2d: Download complete
+ DEBUG [7be34390] 	f4cf59a3d64b: Verifying Checksum
+ DEBUG [7be34390] 	f4cf59a3d64b: Download complete
+ DEBUG [7be34390] 	7146a42aaa2d: Pull complete
+ DEBUG [7be34390] 	f4cf59a3d64b: Pull complete
+ DEBUG [7be34390] 	Digest: sha256:b26b02abcd5b9ab5f77aebf2cb52fb0279adb3c69d9d949e22623266ea172baf
+ DEBUG [7be34390] 	Status: Downloaded newer image for dockerhub.gex:5043/gexlogs-kibana:latest
+  INFO [7be34390] Finished in 7.208 seconds with exit status 0 (successful).
+  INFO [3b62e8e5] Running /usr/bin/env docker tag dockerhub.gex:5043/gexlogs-kibana gexlogs-kibana:0.1  as gex@52.65.97.4
+ DEBUG [3b62e8e5] Command: sudo -u gex -- sh -c '/usr/bin/env docker tag dockerhub.gex:5043/gexlogs-kibana gexlogs-kibana:0.1 '
+ DEBUG [3b62e8e5] 	sudo: unable to resolve host ip-10-170-157-255
+  INFO [3b62e8e5] Finished in 0.694 seconds with exit status 0 (successful).
+  INFO [2f446aac] Running /usr/bin/env docker tag gexlogs-kibana:0.1 gexlogs-kibana:latest  as gex@52.65.97.4
+ DEBUG [2f446aac] Command: sudo -u gex -- sh -c '/usr/bin/env docker tag gexlogs-kibana:0.1 gexlogs-kibana:latest '
+ DEBUG [2f446aac] 	sudo: unable to resolve host ip-10-170-157-255
+  INFO [2f446aac] Finished in 0.693 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:33:12 +0300 cap aws servers:rerun[kibana,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2eb404ae] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [2eb404ae] Command: ~/.rvm/bin/rvm version
+ DEBUG [2eb404ae] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [2eb404ae] Finished in 4.475 seconds with exit status 0 (successful).
+ DEBUG [d2bec070] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [d2bec070] Command: ~/.rvm/bin/rvm current
+ DEBUG [d2bec070] 	ruby-2.3.3
+ DEBUG [d2bec070] Finished in 0.869 seconds with exit status 0 (successful).
+ DEBUG [99637ee9] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [99637ee9] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [99637ee9] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [99637ee9] Finished in 0.982 seconds with exit status 0 (successful).
+ DEBUG [8e8f39ce] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [8e8f39ce] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:33:23 +0300 cap aws servers:deploy_image[kafka,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1332c607] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [1332c607] Command: ~/.rvm/bin/rvm version
+ DEBUG [8e8f39ce] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [8e8f39ce] Finished in 4.196 seconds with exit status 0 (successful).
+  INFO [f9f393a5] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [f9f393a5] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [f9f393a5] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [f9f393a5] 	ip-10-170-157-255
+  INFO [f9f393a5] Finished in 0.690 seconds with exit status 0 (successful).
+  INFO [5ebc26af] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s kibana ' as gex@52.65.97.4
+ DEBUG [5ebc26af] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s kibana '
+ DEBUG [5ebc26af] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container kibana...
+running: docker rm -f gexlogs-kibana 
+ DEBUG [5ebc26af] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [5ebc26af] 	
+creating and running container..
+destroying container kibana...
+running: docker rm -f gexlogs-kibana 
+ DEBUG [5ebc26af] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [5ebc26af] 	
+running: docker create --name gexlogs-kibana --net bridge   -v /disk2/data/containers-gexcloud-logs/kibana/data:/usr/share/kibana/data    --cap-add=NET_ADMIN -h kibana --dns=8.8.8.8    gexlogs-kibana /etc/bootstrap 
+ DEBUG [5ebc26af] 	ff49394a98a5031be666b52447a54c028039515468e8c649d8b225161c022a11
+running: docker network connect --ip 51.0.20.7  overlay gexlogs-kibana
+ DEBUG [5ebc26af] 	
+running: docker start gexlogs-kibana
+ DEBUG [5ebc26af] 	gexlogs-kibana
+ DEBUG [5ebc26af] 	running: docker exec gexlogs-kibana sh -c 'echo "46.172.71.53 git.gex" >>  /etc/hosts'
+ DEBUG [5ebc26af] 	
+running: docker exec gexlogs-kibana sh -c 'echo "51.0.20.6 elasticsearch" >>  /etc/hosts'
+ DEBUG [5ebc26af] 	
+  INFO [5ebc26af] Finished in 1.636 seconds with exit status 0 (successful).
+ DEBUG [1332c607] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [1332c607] Finished in 4.457 seconds with exit status 0 (successful).
+ DEBUG [c53d4b8e] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [c53d4b8e] Command: ~/.rvm/bin/rvm current
+ DEBUG [c53d4b8e] 	ruby-2.3.3
+ DEBUG [c53d4b8e] Finished in 0.869 seconds with exit status 0 (successful).
+ DEBUG [41c905b2] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [41c905b2] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [41c905b2] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [41c905b2] Finished in 0.981 seconds with exit status 0 (successful).
+ DEBUG [819b7c6d] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [819b7c6d] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [819b7c6d] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [819b7c6d] Finished in 4.128 seconds with exit status 0 (successful).
+  INFO [78e723e9] Running /usr/bin/env docker login --username=gex --password=PH_GEX_PASSWD1 https://dockerhub.gex:5043 as gex@52.65.97.4
+ DEBUG [78e723e9] Command: sudo -u gex -- sh -c '/usr/bin/env docker login --username=gex --password=PH_GEX_PASSWD1 https://dockerhub.gex:5043'
+ DEBUG [78e723e9] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [78e723e9] 	Login Succeeded
+  INFO [78e723e9] Finished in 3.472 seconds with exit status 0 (successful).
+  INFO [e849eb0b] Running /usr/bin/env docker pull dockerhub.gex:5043/gexlogs-kafka as gex@52.65.97.4
+ DEBUG [e849eb0b] Command: sudo -u gex -- sh -c '/usr/bin/env docker pull dockerhub.gex:5043/gexlogs-kafka'
+ DEBUG [e849eb0b] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [e849eb0b] 	Using default tag: latest
+ DEBUG [e849eb0b] 	latest: Pulling from gexlogs-kafka
+ DEBUG [e849eb0b] 	e110a4a17941: Already exists
+ DEBUG [e849eb0b] 	1ccbbf7f7816: Already exists
+ DEBUG [e849eb0b] 	01616e7f2ba4: Already exists
+ DEBUG [e849eb0b] 	c1685ffbf7c2: Already exists
+ DEBUG [e849eb0b] 	a222faddd467: Already exists
+ DEBUG [e849eb0b] 	1adba8ad92d3: Pulling fs layer
+f70032d6bf09: Pulling fs layer
+2d7525747157: Pulling fs layer
+ DEBUG [e849eb0b] 	7b5417c98d17: Pulling fs layer
+ DEBUG [e849eb0b] 	7b5417c98d17: Waiting
+ DEBUG [e849eb0b] 	2d7525747157: Verifying Checksum
+2d7525747157: Download complete
+ DEBUG [e849eb0b] 	1adba8ad92d3: Verifying Checksum
+1adba8ad92d3: Download complete
+ DEBUG [e849eb0b] 	f70032d6bf09: Verifying Checksum
+f70032d6bf09: Download complete
+ DEBUG [e849eb0b] 	1adba8ad92d3: Pull complete
+ DEBUG [e849eb0b] 	f70032d6bf09: Pull complete
+ DEBUG [e849eb0b] 	2d7525747157: Pull complete
+ DEBUG [e849eb0b] 	7b5417c98d17: Verifying Checksum
+7b5417c98d17: Download complete
+ DEBUG [e849eb0b] 	7b5417c98d17: Pull complete
+ DEBUG [e849eb0b] 	Digest: sha256:e0ae86f157eb0b972393afc52f11f64450a543afec7c379297ef9e736e1c169a
+ DEBUG [e849eb0b] 	Status: Downloaded newer image for dockerhub.gex:5043/gexlogs-kafka:latest
+  INFO [e849eb0b] Finished in 6.481 seconds with exit status 0 (successful).
+  INFO [e8aea26b] Running /usr/bin/env docker tag dockerhub.gex:5043/gexlogs-kafka gexlogs-kafka:0.1  as gex@52.65.97.4
+ DEBUG [e8aea26b] Command: sudo -u gex -- sh -c '/usr/bin/env docker tag dockerhub.gex:5043/gexlogs-kafka gexlogs-kafka:0.1 '
+ DEBUG [e8aea26b] 	sudo: unable to resolve host ip-10-170-157-255
+  INFO [e8aea26b] Finished in 0.695 seconds with exit status 0 (successful).
+  INFO [3b0d8115] Running /usr/bin/env docker tag gexlogs-kafka:0.1 gexlogs-kafka:latest  as gex@52.65.97.4
+ DEBUG [3b0d8115] Command: sudo -u gex -- sh -c '/usr/bin/env docker tag gexlogs-kafka:0.1 gexlogs-kafka:latest '
+ DEBUG [3b0d8115] 	sudo: unable to resolve host ip-10-170-157-255
+  INFO [3b0d8115] Finished in 0.695 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:33:49 +0300 cap aws servers:rerun[kafka,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [649580eb] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [649580eb] Command: ~/.rvm/bin/rvm version
+ DEBUG [649580eb] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [649580eb] Finished in 4.533 seconds with exit status 0 (successful).
+ DEBUG [cef2dc9d] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [cef2dc9d] Command: ~/.rvm/bin/rvm current
+ DEBUG [cef2dc9d] 	ruby-2.3.3
+ DEBUG [cef2dc9d] Finished in 0.880 seconds with exit status 0 (successful).
+ DEBUG [669ece27] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [669ece27] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [669ece27] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [669ece27] Finished in 0.996 seconds with exit status 0 (successful).
+ DEBUG [ef7e49e7] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [ef7e49e7] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [ef7e49e7] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [ef7e49e7] Finished in 4.182 seconds with exit status 0 (successful).
+  INFO [c211f1ef] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [c211f1ef] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [c211f1ef] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [c211f1ef] 	ip-10-170-157-255
+  INFO [c211f1ef] Finished in 0.685 seconds with exit status 0 (successful).
+  INFO [05428eaf] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s kafka ' as gex@52.65.97.4
+ DEBUG [05428eaf] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s kafka '
+ DEBUG [05428eaf] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container kafka...
+running: docker rm -f gexlogs-kafka 
+ DEBUG [05428eaf] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [05428eaf] 	
+creating and running container..
+destroying container kafka...
+running: docker rm -f gexlogs-kafka 
+ DEBUG [05428eaf] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [05428eaf] 	
+running: docker create --name gexlogs-kafka --net bridge   -v /var/run/docker.sock:/var/run/docker.sock -v /disk2/data/containers-gexcloud-logs/kafka/data:/kafka    --cap-add=NET_ADMIN -h kafka --dns=8.8.8.8   -e KAFKA_BROKER_ID=88 -e KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://51.0.20.9:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -e KAFKA_LOG_DIRS=/kafka/kafka-logs gexlogs-kafka  
+ DEBUG [05428eaf] 	3cf5b740edbc5727825121adc504214fa4ab188888f5ff0de6ace2482ef5685a
+running: docker network connect --ip 51.0.20.9  overlay gexlogs-kafka
+ DEBUG [05428eaf] 	
+running: docker start gexlogs-kafka
+ DEBUG [05428eaf] 	gexlogs-kafka
+ DEBUG [05428eaf] 	running: docker exec gexlogs-kafka sh -c 'echo "46.172.71.53 git.gex" >>  /etc/hosts'
+ DEBUG [05428eaf] 	
+running: docker exec gexlogs-kafka sh -c 'echo "51.0.20.8 zookeeper" >>  /etc/hosts'
+ DEBUG [05428eaf] 	
+  INFO [05428eaf] Finished in 1.716 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:34:07 +0300 cap aws servers:rerun[logs-fluentd-docker-containers,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c8e97045] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [c8e97045] Command: ~/.rvm/bin/rvm version
+ DEBUG [c8e97045] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [c8e97045] Finished in 6.122 seconds with exit status 0 (successful).
+ DEBUG [391fca43] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [391fca43] Command: ~/.rvm/bin/rvm current
+ DEBUG [391fca43] 	ruby-2.3.3
+ DEBUG [391fca43] Finished in 1.248 seconds with exit status 0 (successful).
+ DEBUG [05c76df7] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [05c76df7] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [05c76df7] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [05c76df7] Finished in 1.687 seconds with exit status 0 (successful).
+ DEBUG [cff051eb] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [cff051eb] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [cff051eb] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [cff051eb] Finished in 4.668 seconds with exit status 0 (successful).
+  INFO [e8e9e4c8] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [e8e9e4c8] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [e8e9e4c8] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [e8e9e4c8] 	ip-10-170-157-255
+  INFO [e8e9e4c8] Finished in 1.654 seconds with exit status 0 (successful).
+  INFO [6bb2af69] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-docker-containers ' as gex@52.65.97.4
+ DEBUG [6bb2af69] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-docker-containers '
+ DEBUG [6bb2af69] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container logs-fluentd-docker-containers...
+running: docker rm -f gexlogs-logs-fluentd-docker-containers 
+ DEBUG [6bb2af69] 	gexlogs-logs-fluentd-docker-containers
+creating and running container..
+destroying container logs-fluentd-docker-containers...
+running: docker rm -f gexlogs-logs-fluentd-docker-containers 
+ DEBUG [6bb2af69] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [6bb2af69] 	
+running: docker create --name gexlogs-logs-fluentd-docker-containers --net bridge  -p 24226:24226     --cap-add=NET_ADMIN -h logs-fluentd-docker-containers --dns=8.8.8.8   -e FLUENTD=fluentd -e FLUENTD_CONF_DIR=/fluentd/etc -e FLUENTD_CONF=/fluent.conf gexlogs-logs-fluentd-docker-containers /etc/bootstrap 
+ DEBUG [6bb2af69] 	7a9a96197fb7dc78a30424b545df8306c8846baafdee7f738ca5a68eaa874931
+running: docker network connect --ip 51.0.20.4  overlay gexlogs-logs-fluentd-docker-containers
+ DEBUG [6bb2af69] 	
+running: docker start gexlogs-logs-fluentd-docker-containers
+ DEBUG [6bb2af69] 	gexlogs-logs-fluentd-docker-containers
+ DEBUG [6bb2af69] 	running: docker exec gexlogs-logs-fluentd-docker-containers sh -c 'echo "46.172.71.53 git.gex" >>  /etc/hosts'
+ DEBUG [6bb2af69] 	
+running: docker exec gexlogs-logs-fluentd-docker-containers sh -c 'echo "51.0.20.9 kafka" >>  /etc/hosts'
+ DEBUG [6bb2af69] 	
+  INFO [6bb2af69] Finished in 2.454 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:34:41 +0300 cap aws servers:deploy_image[logs-fluentd-servers-kafka-elastic,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [5e701977] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [5e701977] Command: ~/.rvm/bin/rvm version
+ DEBUG [5e701977] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [5e701977] Finished in 6.736 seconds with exit status 0 (successful).
+ DEBUG [aebe9b7a] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [aebe9b7a] Command: ~/.rvm/bin/rvm current
+ DEBUG [aebe9b7a] 	ruby-2.3.3
+ DEBUG [aebe9b7a] Finished in 1.289 seconds with exit status 0 (successful).
+ DEBUG [7e1d2958] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [7e1d2958] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [7e1d2958] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [7e1d2958] Finished in 0.977 seconds with exit status 0 (successful).
+ DEBUG [0481bb82] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [0481bb82] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [0481bb82] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [0481bb82] Finished in 6.898 seconds with exit status 0 (successful).
+  INFO [8f052840] Running /usr/bin/env docker login --username=gex --password=PH_GEX_PASSWD1 https://dockerhub.gex:5043 as gex@52.65.97.4
+ DEBUG [8f052840] Command: sudo -u gex -- sh -c '/usr/bin/env docker login --username=gex --password=PH_GEX_PASSWD1 https://dockerhub.gex:5043'
+ DEBUG [8f052840] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [8f052840] 	Login Succeeded
+  INFO [8f052840] Finished in 4.707 seconds with exit status 0 (successful).
+  INFO [09186298] Running /usr/bin/env docker pull dockerhub.gex:5043/gexlogs-logs-fluentd-servers-kafka-elastic as gex@52.65.97.4
+ DEBUG [09186298] Command: sudo -u gex -- sh -c '/usr/bin/env docker pull dockerhub.gex:5043/gexlogs-logs-fluentd-servers-kafka-elastic'
+ DEBUG [09186298] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [09186298] 	Using default tag: latest
+ DEBUG [09186298] 	latest: Pulling from gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [09186298] 	c62795f78da9: Already exists
+ DEBUG [09186298] 	d4fceeeb758e: Already exists
+ DEBUG [09186298] 	5c9125a401ae: Already exists
+ DEBUG [09186298] 	0062f774e994: Already exists
+ DEBUG [09186298] 	6b33fd031fac: Already exists
+ DEBUG [09186298] 	aa358daf0edf: Already exists
+ DEBUG [09186298] 	7e4d0d099602: Already exists
+ DEBUG [09186298] 	34da1d2559b0: Pulling fs layer
+c7173774ac3e: Pulling fs layer
+5c906c1ee771: Pulling fs layer
+268a63251093: Pulling fs layer
+2552832727e9: Pulling fs layer
+ DEBUG [09186298] 	6ae5fe200e98: Pulling fs layer
+ceeaeedb0e75: Pulling fs layer
+47921e78e984: Pulling fs layer
+ DEBUG [09186298] 	3c78b9959dc9: Pulling fs layer
+ DEBUG [09186298] 	af194dadf3e3: Pulling fs layer
+ DEBUG [09186298] 	8e14b8cf0aba: Pulling fs layer
+ DEBUG [09186298] 	e0ab69701a2f: Pulling fs layer
+ DEBUG [09186298] 	a92475905ce3: Pulling fs layer
+ DEBUG [09186298] 	45291f7241ff: Pulling fs layer
+ DEBUG [09186298] 	74a5de3562eb: Pulling fs layer
+ DEBUG [09186298] 	53cc5d2324bf: Pulling fs layer
+939bed79dd91: Pulling fs layer
+ DEBUG [09186298] 	ceeaeedb0e75: Waiting
+ DEBUG [09186298] 	3c78b9959dc9: Waiting
+ DEBUG [09186298] 	8e14b8cf0aba: Waiting
+ DEBUG [09186298] 	47921e78e984: Waiting
+ DEBUG [09186298] 	af194dadf3e3: Waiting
+a92475905ce3: 
+ DEBUG [09186298] 	Waiting
+74a5de3562eb: Waiting
+ DEBUG [09186298] 	45291f7241ff: Waiting
+ DEBUG [09186298] 	939bed79dd91: Waiting
+ DEBUG [09186298] 	53cc5d2324bf: Waiting
+ DEBUG [09186298] 	268a63251093: Waiting
+ DEBUG [09186298] 	2552832727e9: Waiting
+ DEBUG [09186298] 	6ae5fe200e98: Waiting
+ DEBUG [09186298] 	5c906c1ee771: Verifying Checksum
+5c906c1ee771: Download complete
+ DEBUG [09186298] 	34da1d2559b0: Verifying Checksum
+34da1d2559b0: Download complete
+ DEBUG [09186298] 	34da1d2559b0: Pull complete
+ DEBUG [09186298] 	268a63251093: Verifying Checksum
+ DEBUG [09186298] 	268a63251093: Download complete
+ DEBUG [09186298] 	2552832727e9: Verifying Checksum
+2552832727e9: Download complete
+ DEBUG [09186298] 	6ae5fe200e98: Verifying Checksum
+6ae5fe200e98: Download complete
+ DEBUG [09186298] 	47921e78e984: Download complete
+ DEBUG [09186298] 	3c78b9959dc9: Download complete
+ DEBUG [09186298] 	af194dadf3e3: Verifying Checksum
+af194dadf3e3: Download complete
+ DEBUG [09186298] 	8e14b8cf0aba: Download complete
+ DEBUG [09186298] 	e0ab69701a2f: Verifying Checksum
+e0ab69701a2f: Download complete
+ DEBUG [09186298] 	a92475905ce3: Verifying Checksum
+a92475905ce3: Download complete
+ DEBUG [09186298] 	45291f7241ff: Verifying Checksum
+45291f7241ff: Download complete
+ DEBUG [09186298] 	c7173774ac3e: Verifying Checksum
+c7173774ac3e: Download complete
+ DEBUG [09186298] 	74a5de3562eb: Verifying Checksum
+74a5de3562eb: Download complete
+ DEBUG [09186298] 	53cc5d2324bf: Verifying Checksum
+53cc5d2324bf: Download complete
+ DEBUG [09186298] 	c7173774ac3e: 
+ DEBUG [09186298] 	Pull complete
+ DEBUG [09186298] 	5c906c1ee771: Pull complete
+ DEBUG [09186298] 	939bed79dd91: Verifying Checksum
+939bed79dd91: Download complete
+ DEBUG [09186298] 	268a63251093: Pull complete
+ DEBUG [09186298] 	2552832727e9: Pull complete
+ DEBUG [09186298] 	6ae5fe200e98: Pull complete
+ DEBUG [09186298] 	ceeaeedb0e75: Verifying Checksum
+ceeaeedb0e75: Download complete
+ DEBUG [09186298] 	ceeaeedb0e75: Pull complete
+ DEBUG [09186298] 	47921e78e984: Pull complete
+ DEBUG [09186298] 	3c78b9959dc9: Pull complete
+ DEBUG [09186298] 	af194dadf3e3: Pull complete
+ DEBUG [09186298] 	8e14b8cf0aba: Pull complete
+ DEBUG [09186298] 	e0ab69701a2f: Pull complete
+ DEBUG [09186298] 	a92475905ce3: Pull complete
+ DEBUG [09186298] 	45291f7241ff: Pull complete
+ DEBUG [09186298] 	74a5de3562eb: Pull complete
+ DEBUG [09186298] 	53cc5d2324bf: Pull complete
+ DEBUG [09186298] 	939bed79dd91: Pull complete
+ DEBUG [09186298] 	Digest: sha256:d67fdeecec951649f84a9a1a4d25dea5286f96dcfcd85ae0da80c81ff17075d2
+ DEBUG [09186298] 	Status: Downloaded newer image for dockerhub.gex:5043/gexlogs-logs-fluentd-servers-kafka-elastic:latest
+  INFO [09186298] Finished in 31.207 seconds with exit status 0 (successful).
+  INFO [11174685] Running /usr/bin/env docker tag dockerhub.gex:5043/gexlogs-logs-fluentd-servers-kafka-elastic gexlogs-logs-fluentd-servers-kafka-elastic:0.1  as gex@52.65.97.4
+ DEBUG [11174685] Command: sudo -u gex -- sh -c '/usr/bin/env docker tag dockerhub.gex:5043/gexlogs-logs-fluentd-servers-kafka-elastic gexlogs-logs-fluentd-servers-kafka-elastic:0.1 '
+ DEBUG [11174685] 	sudo: unable to resolve host ip-10-170-157-255
+  INFO [11174685] Finished in 0.731 seconds with exit status 0 (successful).
+  INFO [2e79f01c] Running /usr/bin/env docker tag gexlogs-logs-fluentd-servers-kafka-elastic:0.1 gexlogs-logs-fluentd-servers-kafka-elastic:latest  as gex@52.65.97.4
+ DEBUG [2e79f01c] Command: sudo -u gex -- sh -c '/usr/bin/env docker tag gexlogs-logs-fluentd-servers-kafka-elastic:0.1 gexlogs-logs-fluentd-servers-kafka-elastic:latest '
+ DEBUG [2e79f01c] 	sudo: unable to resolve host ip-10-170-157-255
+  INFO [2e79f01c] Finished in 0.729 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:36:41 +0300 cap aws servers:rerun[logs-fluentd-servers-kafka-elastic,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [0322a39d] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [0322a39d] Command: ~/.rvm/bin/rvm version
+ DEBUG [0322a39d] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [0322a39d] Finished in 4.452 seconds with exit status 0 (successful).
+ DEBUG [a0677083] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [a0677083] Command: ~/.rvm/bin/rvm current
+ DEBUG [a0677083] 	ruby-2.3.3
+ DEBUG [a0677083] Finished in 0.870 seconds with exit status 0 (successful).
+ DEBUG [c8aa677e] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [c8aa677e] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [c8aa677e] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [c8aa677e] Finished in 0.988 seconds with exit status 0 (successful).
+ DEBUG [85a86696] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [85a86696] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [85a86696] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [85a86696] Finished in 4.380 seconds with exit status 0 (successful).
+  INFO [6387f897] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [6387f897] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [6387f897] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [6387f897] 	ip-10-170-157-255
+  INFO [6387f897] Finished in 0.683 seconds with exit status 0 (successful).
+  INFO [9a9e3cd4] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-servers-kafka-elastic ' as gex@52.65.97.4
+ DEBUG [9a9e3cd4] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-servers-kafka-elastic '
+ DEBUG [9a9e3cd4] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container logs-fluentd-servers-kafka-elastic...
+running: docker rm -f gexlogs-logs-fluentd-servers-kafka-elastic 
+ DEBUG [9a9e3cd4] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [9a9e3cd4] 	
+creating and running container..
+destroying container logs-fluentd-servers-kafka-elastic...
+running: docker rm -f gexlogs-logs-fluentd-servers-kafka-elastic 
+ DEBUG [9a9e3cd4] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [9a9e3cd4] 	
+running: docker create --name gexlogs-logs-fluentd-servers-kafka-elastic --net bridge       --cap-add=NET_ADMIN -h logs-fluentd-servers-kafka-elastic --dns=8.8.8.8   -e FLUENTD=fluentd -e FLUENTD_CONF_DIR=/fluentd/etc -e FLUENTD_CONF=/fluent.conf gexlogs-logs-fluentd-servers-kafka-elastic /etc/bootstrap 
+ DEBUG [9a9e3cd4] 	8fe07c2fdcfda02e0090a73600cfce1271bb9e636c2e1b0cf0841597a5dc5a4d
+running: docker network connect --ip 51.0.20.5  overlay gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [9a9e3cd4] 	
+running: docker start gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [9a9e3cd4] 	gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [9a9e3cd4] 	running: docker exec gexlogs-logs-fluentd-servers-kafka-elastic sh -c 'echo "46.172.71.53 git.gex" >>  /etc/hosts'
+ DEBUG [9a9e3cd4] 	
+running: docker exec gexlogs-logs-fluentd-servers-kafka-elastic sh -c 'echo "51.0.20.6 elasticsearch" >>  /etc/hosts'
+ DEBUG [9a9e3cd4] 	
+running: docker exec gexlogs-logs-fluentd-servers-kafka-elastic sh -c 'echo "51.0.20.9 kafka" >>  /etc/hosts'
+ DEBUG [9a9e3cd4] 	
+  INFO [9a9e3cd4] Finished in 1.737 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:37:22 +0300 cap aws servers:deploy_image[logs-fluentd-api-servers,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [9b146c82] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [9b146c82] Command: ~/.rvm/bin/rvm version
+ DEBUG [9b146c82] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [9b146c82] Finished in 4.327 seconds with exit status 0 (successful).
+ DEBUG [7d9633a9] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [7d9633a9] Command: ~/.rvm/bin/rvm current
+ DEBUG [7d9633a9] 	ruby-2.3.3
+ DEBUG [7d9633a9] Finished in 0.845 seconds with exit status 0 (successful).
+ DEBUG [35d76946] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [35d76946] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [35d76946] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [35d76946] Finished in 0.960 seconds with exit status 0 (successful).
+ DEBUG [f21c3841] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [f21c3841] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [f21c3841] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [f21c3841] Finished in 4.157 seconds with exit status 0 (successful).
+  INFO [9139ef58] Running /usr/bin/env docker login --username=gex --password=PH_GEX_PASSWD1 https://dockerhub.gex:5043 as gex@52.65.97.4
+ DEBUG [9139ef58] Command: sudo -u gex -- sh -c '/usr/bin/env docker login --username=gex --password=PH_GEX_PASSWD1 https://dockerhub.gex:5043'
+ DEBUG [9139ef58] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [9139ef58] 	Login Succeeded
+  INFO [9139ef58] Finished in 3.488 seconds with exit status 0 (successful).
+  INFO [b8ab4985] Running /usr/bin/env docker pull dockerhub.gex:5043/gexlogs-logs-fluentd-api-servers as gex@52.65.97.4
+ DEBUG [b8ab4985] Command: sudo -u gex -- sh -c '/usr/bin/env docker pull dockerhub.gex:5043/gexlogs-logs-fluentd-api-servers'
+ DEBUG [b8ab4985] 	sudo
+ DEBUG [b8ab4985] 	: unable to resolve host ip-10-170-157-255
+ DEBUG [b8ab4985] 	Using default tag: latest
+ DEBUG [b8ab4985] 	latest: Pulling from gexlogs-logs-fluentd-api-servers
+c62795f78da9: 
+ DEBUG [b8ab4985] 	Already exists
+ DEBUG [b8ab4985] 	d4fceeeb758e: Already exists
+ DEBUG [b8ab4985] 	5c9125a401ae: Already exists
+ DEBUG [b8ab4985] 	0062f774e994: Already exists
+ DEBUG [b8ab4985] 	6b33fd031fac: Already exists
+ DEBUG [b8ab4985] 	aa358daf0edf: Already exists
+ DEBUG [b8ab4985] 	7e4d0d099602: Already exists
+ DEBUG [b8ab4985] 	b35f656157f2: Already exists
+ DEBUG [b8ab4985] 	958da7b9276c: Already exists
+ DEBUG [b8ab4985] 	fbecf15ecb98: Already exists
+ DEBUG [b8ab4985] 	61a3b4ec13c3: Already exists
+ DEBUG [b8ab4985] 	5fd4cc859dcb: Already exists
+ DEBUG [b8ab4985] 	2a130440a221: Already exists
+ DEBUG [b8ab4985] 	ad782771bc60: Already exists
+ DEBUG [b8ab4985] 	c6918851b0fb: Already exists
+ DEBUG [b8ab4985] 	b07528eabf14: Already exists
+ DEBUG [b8ab4985] 	8b584d5af5c9: Already exists
+ DEBUG [b8ab4985] 	f4c77b8780d8: Pulling fs layer
+7c2c724564a8: Pulling fs layer
+a13cbf1a4c4d: Pulling fs layer
+13d3d93b3eb3: Pulling fs layer
+a63a73488a67: Pulling fs layer
+d9fc43a6f24c: Pulling fs layer
+d9fc43a6f24c: Waiting
+13d3d93b3eb3: Waiting
+ DEBUG [b8ab4985] 	a63a73488a67: Waiting
+ DEBUG [b8ab4985] 	a13cbf1a4c4d: Verifying Checksum
+a13cbf1a4c4d: Download complete
+ DEBUG [b8ab4985] 	f4c77b8780d8: Download complete
+ DEBUG [b8ab4985] 	7c2c724564a8: Verifying Checksum
+ DEBUG [b8ab4985] 	7c2c724564a8: 
+ DEBUG [b8ab4985] 	Download complete
+ DEBUG [b8ab4985] 	f4c77b8780d8: Pull complete
+ DEBUG [b8ab4985] 	7c2c724564a8: Pull complete
+ DEBUG [b8ab4985] 	a13cbf1a4c4d: Pull complete
+ DEBUG [b8ab4985] 	13d3d93b3eb3: Verifying Checksum
+13d3d93b3eb3: Download complete
+ DEBUG [b8ab4985] 	13d3d93b3eb3: Pull complete
+ DEBUG [b8ab4985] 	a63a73488a67: Verifying Checksum
+a63a73488a67: Download complete
+ DEBUG [b8ab4985] 	d9fc43a6f24c: Download complete
+ DEBUG [b8ab4985] 	a63a73488a67: Pull complete
+ DEBUG [b8ab4985] 	d9fc43a6f24c: Pull complete
+ DEBUG [b8ab4985] 	Digest: sha256:72243257c8bdce90e8099b3189479e6ceb39e3c5482b92a730a56a688302383b
+ DEBUG [b8ab4985] 	Status: Downloaded newer image for dockerhub.gex:5043/gexlogs-logs-fluentd-api-servers:latest
+  INFO [b8ab4985] Finished in 6.705 seconds with exit status 0 (successful).
+  INFO [12879b8c] Running /usr/bin/env docker tag dockerhub.gex:5043/gexlogs-logs-fluentd-api-servers gexlogs-logs-fluentd-api-servers:0.1  as gex@52.65.97.4
+ DEBUG [12879b8c] Command: sudo -u gex -- sh -c '/usr/bin/env docker tag dockerhub.gex:5043/gexlogs-logs-fluentd-api-servers gexlogs-logs-fluentd-api-servers:0.1 '
+ DEBUG [12879b8c] 	sudo: unable to resolve host ip-10-170-157-255
+  INFO [12879b8c] Finished in 0.700 seconds with exit status 0 (successful).
+  INFO [725ff078] Running /usr/bin/env docker tag gexlogs-logs-fluentd-api-servers:0.1 gexlogs-logs-fluentd-api-servers:latest  as gex@52.65.97.4
+ DEBUG [725ff078] Command: sudo -u gex -- sh -c '/usr/bin/env docker tag gexlogs-logs-fluentd-api-servers:0.1 gexlogs-logs-fluentd-api-servers:latest '
+ DEBUG [725ff078] 	sudo: unable to resolve host ip-10-170-157-255
+  INFO [725ff078] Finished in 0.699 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:37:56 +0300 cap aws servers:rerun[logs-fluentd-api-servers,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [94d96c19] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [94d96c19] Command: ~/.rvm/bin/rvm version
+ DEBUG [94d96c19] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [94d96c19] Finished in 4.457 seconds with exit status 0 (successful).
+ DEBUG [1db89f4d] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [1db89f4d] Command: ~/.rvm/bin/rvm current
+ DEBUG [1db89f4d] 	ruby-2.3.3
+ DEBUG [1db89f4d] Finished in 0.868 seconds with exit status 0 (successful).
+ DEBUG [278e9f6f] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [278e9f6f] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [278e9f6f] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [278e9f6f] Finished in 0.990 seconds with exit status 0 (successful).
+ DEBUG [4d6ec636] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [4d6ec636] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [4d6ec636] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [4d6ec636] Finished in 4.341 seconds with exit status 0 (successful).
+  INFO [067aad9a] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [067aad9a] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [067aad9a] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [067aad9a] 	ip-10-170-157-255
+  INFO [067aad9a] Finished in 0.676 seconds with exit status 0 (successful).
+  INFO [4501b251] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-api-servers ' as gex@52.65.97.4
+ DEBUG [4501b251] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-api-servers '
+ DEBUG [4501b251] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container logs-fluentd-api-servers...
+running: docker rm -f gexlogs-logs-fluentd-api-servers 
+ DEBUG [4501b251] 	Error response from daemon: No such container: gexlogs-logs-fluentd-api-servers
+ DEBUG [4501b251] 	
+creating and running container..
+destroying container logs-fluentd-api-servers...
+running: docker rm -f gexlogs-logs-fluentd-api-servers 
+ DEBUG [4501b251] 	Error response from daemon: No such container: gexlogs-logs-fluentd-api-servers
+ DEBUG [4501b251] 	
+running: docker create --name gexlogs-logs-fluentd-api-servers --net bridge   -v /disk2/data/containers/gex-main/api/log/nginx:/api-nginx/ -v /disk2/data/containers/gex-main/api/log/passenger:/api-passenger/ -v /disk2/data/containers/gex-main/api/log/god:/api-god/ -v /disk2/data/containers/gex-main/api/apps/apihub/shared/log:/api-apihub/    --cap-add=NET_ADMIN -h logs-fluentd-api-servers --dns=8.8.8.8   -e FLUENTD=fluentd -e FLUENTD_CONF_DIR=/fluentd/etc -e FLUENTD_CONF=/fluent.conf gexlogs-logs-fluentd-api-servers /etc/bootstrap 
+ DEBUG [4501b251] 	f71c27ce3b59776dc01052449ba1ea5e28afd0478524510676a2df2a6eacf518
+running: docker network connect --ip 51.0.20.3  overlay gexlogs-logs-fluentd-api-servers
+ DEBUG [4501b251] 	
+running: docker start gexlogs-logs-fluentd-api-servers
+ DEBUG [4501b251] 	gexlogs-logs-fluentd-api-servers
+ DEBUG [4501b251] 	running: docker exec gexlogs-logs-fluentd-api-servers sh -c 'echo "46.172.71.53 git.gex" >>  /etc/hosts'
+ DEBUG [4501b251] 	
+running: docker exec gexlogs-logs-fluentd-api-servers sh -c 'echo "51.0.20.9 kafka" >>  /etc/hosts'
+ DEBUG [4501b251] 	
+  INFO [4501b251] Finished in 1.699 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:38:22 +0300 cap aws servers:deploy_image[logs-fluentd-provisioner-servers,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [18cce049] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [18cce049] Command: ~/.rvm/bin/rvm version
+ DEBUG [18cce049] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [18cce049] Finished in 4.516 seconds with exit status 0 (successful).
+ DEBUG [fdd8f068] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [fdd8f068] Command: ~/.rvm/bin/rvm current
+ DEBUG [fdd8f068] 	ruby-2.3.3
+ DEBUG [fdd8f068] Finished in 0.878 seconds with exit status 0 (successful).
+ DEBUG [6f2eb1b1] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [6f2eb1b1] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [6f2eb1b1] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [6f2eb1b1] Finished in 0.991 seconds with exit status 0 (successful).
+ DEBUG [d220659a] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [d220659a] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [d220659a] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [d220659a] Finished in 4.174 seconds with exit status 0 (successful).
+  INFO [e1618b61] Running /usr/bin/env docker login --username=gex --password=PH_GEX_PASSWD1 https://dockerhub.gex:5043 as gex@52.65.97.4
+ DEBUG [e1618b61] Command: sudo -u gex -- sh -c '/usr/bin/env docker login --username=gex --password=PH_GEX_PASSWD1 https://dockerhub.gex:5043'
+ DEBUG [e1618b61] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [e1618b61] 	Login Succeeded
+  INFO [e1618b61] Finished in 3.434 seconds with exit status 0 (successful).
+  INFO [9d35e826] Running /usr/bin/env docker pull dockerhub.gex:5043/gexlogs-logs-fluentd-provisioner-servers as gex@52.65.97.4
+ DEBUG [9d35e826] Command: sudo -u gex -- sh -c '/usr/bin/env docker pull dockerhub.gex:5043/gexlogs-logs-fluentd-provisioner-servers'
+ DEBUG [9d35e826] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [9d35e826] 	Using default tag: latest
+ DEBUG [9d35e826] 	latest: Pulling from gexlogs-logs-fluentd-provisioner-servers
+c62795f78da9: Already exists
+ DEBUG [9d35e826] 	d4fceeeb758e: Already exists
+ DEBUG [9d35e826] 	5c9125a401ae: Already exists
+ DEBUG [9d35e826] 	0062f774e994: Already exists
+ DEBUG [9d35e826] 	6b33fd031fac: Already exists
+ DEBUG [9d35e826] 	aa358daf0edf: Already exists
+ DEBUG [9d35e826] 	7e4d0d099602: Already exists
+ DEBUG [9d35e826] 	b35f656157f2: Already exists
+ DEBUG [9d35e826] 	958da7b9276c: Already exists
+ DEBUG [9d35e826] 	fbecf15ecb98: 
+ DEBUG [9d35e826] 	Already exists
+ DEBUG [9d35e826] 	61a3b4ec13c3: Already exists
+ DEBUG [9d35e826] 	5fd4cc859dcb: Already exists
+ DEBUG [9d35e826] 	2a130440a221: Already exists
+ DEBUG [9d35e826] 	ad782771bc60: Already exists
+ DEBUG [9d35e826] 	c6918851b0fb: Already exists
+ DEBUG [9d35e826] 	b07528eabf14: Already exists
+ DEBUG [9d35e826] 	8b584d5af5c9: Already exists
+ DEBUG [9d35e826] 	f4c77b8780d8: Already exists
+ DEBUG [9d35e826] 	7c2c724564a8: Already exists
+ DEBUG [9d35e826] 	a13cbf1a4c4d: Already exists
+ DEBUG [9d35e826] 	13d3d93b3eb3: Already exists
+ DEBUG [9d35e826] 	a63a73488a67: Already exists
+ DEBUG [9d35e826] 	29aca5364f1c: Pulling fs layer
+ DEBUG [9d35e826] 	29aca5364f1c: 
+ DEBUG [9d35e826] 	Download complete
+ DEBUG [9d35e826] 	29aca5364f1c: Pull complete
+ DEBUG [9d35e826] 	Digest: sha256:664573f4cdb904a1126060341ad1a40e212ed145a3313841630fbd9e3d800079
+ DEBUG [9d35e826] 	Status: Downloaded newer image for dockerhub.gex:5043/gexlogs-logs-fluentd-provisioner-servers:latest
+  INFO [9d35e826] Finished in 6.123 seconds with exit status 0 (successful).
+  INFO [ae3946c6] Running /usr/bin/env docker tag dockerhub.gex:5043/gexlogs-logs-fluentd-provisioner-servers gexlogs-logs-fluentd-provisioner-servers:0.1  as gex@52.65.97.4
+ DEBUG [ae3946c6] Command: sudo -u gex -- sh -c '/usr/bin/env docker tag dockerhub.gex:5043/gexlogs-logs-fluentd-provisioner-servers gexlogs-logs-fluentd-provisioner-servers:0.1 '
+ DEBUG [ae3946c6] 	sudo: unable to resolve host ip-10-170-157-255
+  INFO [ae3946c6] Finished in 0.703 seconds with exit status 0 (successful).
+  INFO [45f23278] Running /usr/bin/env docker tag gexlogs-logs-fluentd-provisioner-servers:0.1 gexlogs-logs-fluentd-provisioner-servers:latest  as gex@52.65.97.4
+ DEBUG [45f23278] Command: sudo -u gex -- sh -c '/usr/bin/env docker tag gexlogs-logs-fluentd-provisioner-servers:0.1 gexlogs-logs-fluentd-provisioner-servers:latest '
+ DEBUG [45f23278] 	sudo: unable to resolve host ip-10-170-157-255
+  INFO [45f23278] Finished in 0.716 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:38:52 +0300 cap aws servers:rerun[logs-fluentd-provisioner-servers,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [b11e2b1a] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [b11e2b1a] Command: ~/.rvm/bin/rvm version
+ DEBUG [b11e2b1a] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [b11e2b1a] Finished in 4.355 seconds with exit status 0 (successful).
+ DEBUG [c5f5a276] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [c5f5a276] Command: ~/.rvm/bin/rvm current
+ DEBUG [c5f5a276] 	ruby-2.3.3
+ DEBUG [c5f5a276] Finished in 0.849 seconds with exit status 0 (successful).
+ DEBUG [854d2f3a] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [854d2f3a] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [854d2f3a] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [854d2f3a] Finished in 0.968 seconds with exit status 0 (successful).
+ DEBUG [c7689ef2] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [c7689ef2] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [c7689ef2] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [c7689ef2] Finished in 4.163 seconds with exit status 0 (successful).
+  INFO [ffbb38b1] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [ffbb38b1] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [ffbb38b1] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [ffbb38b1] 	ip-10-170-157-255
+  INFO [ffbb38b1] Finished in 0.682 seconds with exit status 0 (successful).
+  INFO [57ce4eba] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-provisioner-servers ' as gex@52.65.97.4
+ DEBUG [57ce4eba] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-provisioner-servers '
+ DEBUG [57ce4eba] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container logs-fluentd-provisioner-servers...
+running: docker rm -f gexlogs-logs-fluentd-provisioner-servers 
+ DEBUG [57ce4eba] 	Error response from daemon: No such container: gexlogs-logs-fluentd-provisioner-servers
+ DEBUG [57ce4eba] 	
+creating and running container..
+destroying container logs-fluentd-provisioner-servers...
+running: docker rm -f gexlogs-logs-fluentd-provisioner-servers 
+ DEBUG [57ce4eba] 	Error response from daemon: No such container: gexlogs-logs-fluentd-provisioner-servers
+ DEBUG [57ce4eba] 	
+running: docker create --name gexlogs-logs-fluentd-provisioner-servers --net bridge   -v /disk2/data/containers/gex-main/provisioner/log/sidekiq:/provisioner-sidekiq/ -v /disk2/data/containers/gex-main/provisioner/log/gush:/provisioner-gush/ -v /disk2/data/containers/gex-main/provisioner/log/god:/provisioner-god/    --cap-add=NET_ADMIN -h logs-fluentd-provisioner-servers --dns=8.8.8.8   -e FLUENTD=fluentd -e FLUENTD_CONF_DIR=/fluentd/etc -e FLUENTD_CONF=/fluent.conf gexlogs-logs-fluentd-provisioner-servers /etc/bootstrap 
+ DEBUG [57ce4eba] 	347e200a9fbd1d4c6e4b66f2f7e5c76ba8c79fa3c44dfa21a631186d4b2bb209
+running: docker network connect --ip 51.0.20.10  overlay gexlogs-logs-fluentd-provisioner-servers
+ DEBUG [57ce4eba] 	
+running: docker start gexlogs-logs-fluentd-provisioner-servers
+ DEBUG [57ce4eba] 	gexlogs-logs-fluentd-provisioner-servers
+ DEBUG [57ce4eba] 	running: docker exec gexlogs-logs-fluentd-provisioner-servers sh -c 'echo "46.172.71.53 git.gex" >>  /etc/hosts'
+ DEBUG [57ce4eba] 	
+running: docker exec gexlogs-logs-fluentd-provisioner-servers sh -c 'echo "51.0.20.9 kafka" >>  /etc/hosts'
+ DEBUG [57ce4eba] 	
+  INFO [57ce4eba] Finished in 1.692 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:39:17 +0300 cap aws servers:deploy_image[ntopng,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [5bf6004d] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [5bf6004d] Command: ~/.rvm/bin/rvm version
+ DEBUG [5bf6004d] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [5bf6004d] Finished in 4.389 seconds with exit status 0 (successful).
+ DEBUG [678aaba9] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [678aaba9] Command: ~/.rvm/bin/rvm current
+ DEBUG [678aaba9] 	ruby-2.3.3
+ DEBUG [678aaba9] Finished in 0.855 seconds with exit status 0 (successful).
+ DEBUG [db971c59] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [db971c59] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [db971c59] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [db971c59] Finished in 0.970 seconds with exit status 0 (successful).
+ DEBUG [4eb53bcc] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [4eb53bcc] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [4eb53bcc] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [4eb53bcc] Finished in 4.195 seconds with exit status 0 (successful).
+  INFO [7d7ca4da] Running /usr/bin/env docker login --username=gex --password=PH_GEX_PASSWD1 https://dockerhub.gex:5043 as gex@52.65.97.4
+ DEBUG [7d7ca4da] Command: sudo -u gex -- sh -c '/usr/bin/env docker login --username=gex --password=PH_GEX_PASSWD1 https://dockerhub.gex:5043'
+ DEBUG [7d7ca4da] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [7d7ca4da] 	Login Succeeded
+  INFO [7d7ca4da] Finished in 3.393 seconds with exit status 0 (successful).
+  INFO [6bde0d65] Running /usr/bin/env docker pull dockerhub.gex:5043/gexlogs-ntopng as gex@52.65.97.4
+ DEBUG [6bde0d65] Command: sudo -u gex -- sh -c '/usr/bin/env docker pull dockerhub.gex:5043/gexlogs-ntopng'
+ DEBUG [6bde0d65] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [6bde0d65] 	Using default tag: latest
+ DEBUG [6bde0d65] 	latest: Pulling from gexlogs-ntopng
+fec6b243e075: Pulling fs layer
+190e0e9a3e79: Pulling fs layer
+0d79cf192e4c: Pulling fs layer
+ DEBUG [6bde0d65] 	38398c307b51: Pulling fs layer
+356665655a72: Pulling fs layer
+3762bca529bd: Pulling fs layer
+ DEBUG [6bde0d65] 	356665655a72: Waiting
+3762bca529bd: Waiting
+38398c307b51: Waiting
+ DEBUG [6bde0d65] 	190e0e9a3e79: 
+ DEBUG [6bde0d65] 	Verifying Checksum
+190e0e9a3e79: Download complete
+ DEBUG [6bde0d65] 	0d79cf192e4c: Verifying Checksum
+0d79cf192e4c: Download complete
+ DEBUG [6bde0d65] 	356665655a72: Verifying Checksum
+356665655a72: Download complete
+ DEBUG [6bde0d65] 	38398c307b51: Verifying Checksum
+38398c307b51: Download complete
+ DEBUG [6bde0d65] 	3762bca529bd: Verifying Checksum
+3762bca529bd: Download complete
+ DEBUG [6bde0d65] 	fec6b243e075: Verifying Checksum
+fec6b243e075: Download complete
+ DEBUG [6bde0d65] 	fec6b243e075: Pull complete
+ DEBUG [6bde0d65] 	190e0e9a3e79: Pull complete
+ DEBUG [6bde0d65] 	0d79cf192e4c: Pull complete
+ DEBUG [6bde0d65] 	38398c307b51: Pull complete
+ DEBUG [6bde0d65] 	356665655a72: Pull complete
+ DEBUG [6bde0d65] 	3762bca529bd: Pull complete
+ DEBUG [6bde0d65] 	Digest: sha256:7b943964f492dc7e5ef95319eef8afd4ae5a7f3a815f0927fbad7bc77fe3d7bc
+ DEBUG [6bde0d65] 	Status: Downloaded newer image for dockerhub.gex:5043/gexlogs-ntopng:latest
+  INFO [6bde0d65] Finished in 23.073 seconds with exit status 0 (successful).
+  INFO [1ad386da] Running /usr/bin/env docker tag dockerhub.gex:5043/gexlogs-ntopng gexlogs-ntopng:0.1  as gex@52.65.97.4
+ DEBUG [1ad386da] Command: sudo -u gex -- sh -c '/usr/bin/env docker tag dockerhub.gex:5043/gexlogs-ntopng gexlogs-ntopng:0.1 '
+ DEBUG [1ad386da] 	sudo: unable to resolve host ip-10-170-157-255
+  INFO [1ad386da] Finished in 0.704 seconds with exit status 0 (successful).
+  INFO [e8e7ae66] Running /usr/bin/env docker tag gexlogs-ntopng:0.1 gexlogs-ntopng:latest  as gex@52.65.97.4
+ DEBUG [e8e7ae66] Command: sudo -u gex -- sh -c '/usr/bin/env docker tag gexlogs-ntopng:0.1 gexlogs-ntopng:latest '
+ DEBUG [e8e7ae66] 	sudo: unable to resolve host ip-10-170-157-255
+  INFO [e8e7ae66] Finished in 0.710 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-03 17:40:05 +0300 cap aws servers:rerun[ntopng,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [d8836861] Running ~/.rvm/bin/rvm version as gex@52.65.97.4
+ DEBUG [d8836861] Command: ~/.rvm/bin/rvm version
+ DEBUG [d8836861] 	rvm 1.29.2 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io/]
+ DEBUG [d8836861] Finished in 4.426 seconds with exit status 0 (successful).
+ DEBUG [674f1150] Running ~/.rvm/bin/rvm current as gex@52.65.97.4
+ DEBUG [674f1150] Command: ~/.rvm/bin/rvm current
+ DEBUG [674f1150] 	ruby-2.3.3
+ DEBUG [674f1150] Finished in 0.862 seconds with exit status 0 (successful).
+ DEBUG [417d3ef5] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@52.65.97.4
+ DEBUG [417d3ef5] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [417d3ef5] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [417d3ef5] Finished in 0.977 seconds with exit status 0 (successful).
+ DEBUG [4b3afdc6] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@52.65.97.4
+ DEBUG [4b3afdc6] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [4b3afdc6] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [4b3afdc6] Finished in 4.199 seconds with exit status 0 (successful).
+  INFO [abd37341] Running /usr/bin/env hostname as gex@52.65.97.4
+ DEBUG [abd37341] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [abd37341] 	sudo: unable to resolve host ip-10-170-157-255
+ DEBUG [abd37341] 	ip-10-170-157-255
+  INFO [abd37341] Finished in 0.690 seconds with exit status 0 (successful).
+  INFO [008d5ed8] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s ntopng ' as gex@52.65.97.4
+ DEBUG [008d5ed8] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s ntopng '
+ DEBUG [008d5ed8] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container ntopng...
+running: docker rm -f gexlogs-ntopng 
+ DEBUG [008d5ed8] 	Error response from daemon: No such container: gexlogs-ntopng
+ DEBUG [008d5ed8] 	
+creating and running container..
+destroying container ntopng...
+running: docker rm -f gexlogs-ntopng 
+ DEBUG [008d5ed8] 	Error response from daemon: No such container: gexlogs-ntopng
+ DEBUG [008d5ed8] 	
+running: docker create --name gexlogs-ntopng --net bridge       --privileged  gexlogs-ntopng  
+ DEBUG [008d5ed8] 	893a6ec74668035f2f98d7a193235a253ee69f6d48c1f868bf1a043d15d5db3c
+running: docker network connect --ip 51.0.20.2  overlay gexlogs-ntopng
+ DEBUG [008d5ed8] 	
+running: docker start gexlogs-ntopng
+ DEBUG [008d5ed8] 	gexlogs-ntopng
+ DEBUG [008d5ed8] 	rpc error: code = 2 desc = oci runtime error: exec failed: container_linux.go:247: starting container process caused "process_linux.go:83: executing setns process caused \"exit status 15\""
+
+ DEBUG [008d5ed8] 	Error response from daemon: Container 893a6ec74668035f2f98d7a193235a253ee69f6d48c1f868bf1a043d15d5db3c is not running
+ DEBUG [008d5ed8] 	Error response from daemon: Container 893a6ec74668035f2f98d7a193235a253ee69f6d48c1f868bf1a043d15d5db3c is not running
+ DEBUG [008d5ed8] 	Error response from daemon: Container 893a6ec74668035f2f98d7a193235a253ee69f6d48c1f868bf1a043d15d5db3c is not running
+ DEBUG [008d5ed8] 	Error response from daemon: Container 893a6ec74668035f2f98d7a193235a253ee69f6d48c1f868bf1a043d15d5db3c is not running
+ DEBUG [008d5ed8] 	Error response from daemon: Container 893a6ec74668035f2f98d7a193235a253ee69f6d48c1f868bf1a043d15d5db3c is not running
+ DEBUG [008d5ed8] 	Error response from daemon: Container 893a6ec74668035f2f98d7a193235a253ee69f6d48c1f868bf1a043d15d5db3c is not running
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-11 18:38:57 +0300 cap main servers:rerun[elasticsearch,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1790900a] Running ~/.rvm/bin/rvm version as gex@51.1.0.50
+ DEBUG [1790900a] Command: ~/.rvm/bin/rvm version
+ DEBUG [1790900a] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [1790900a] Finished in 0.528 seconds with exit status 0 (successful).
+ DEBUG [0a84052a] Running ~/.rvm/bin/rvm current as gex@51.1.0.50
+ DEBUG [0a84052a] Command: ~/.rvm/bin/rvm current
+ DEBUG [0a84052a] 	ruby-2.3.3
+ DEBUG [0a84052a] Finished in 0.288 seconds with exit status 0 (successful).
+ DEBUG [2db17faa] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@51.1.0.50
+ DEBUG [2db17faa] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [2db17faa] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [2db17faa] Finished in 0.451 seconds with exit status 0 (successful).
+ DEBUG [00a6eb91] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@51.1.0.50
+ DEBUG [00a6eb91] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [00a6eb91] Finished in 0.227 seconds with exit status 0 (successful).
+  INFO [468b5c0b] Running /usr/bin/env hostname as gex@51.1.0.50
+ DEBUG [468b5c0b] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [468b5c0b] 	gexsrv
+  INFO [468b5c0b] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [af6acbd1] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s elasticsearch ' as gex@51.1.0.50
+ DEBUG [af6acbd1] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s elasticsearch '
+ DEBUG [af6acbd1] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container elasticsearch...
+running: docker rm -f gexlogs-elasticsearch 
+ DEBUG [af6acbd1] 	gexlogs-elasticsearch
+creating and running container..
+destroying container elasticsearch...
+running: docker rm -f gexlogs-elasticsearch 
+ DEBUG [af6acbd1] 	Error response from daemon: No such container: gexlogs-elasticsearch
+ DEBUG [af6acbd1] 	
+running: docker create --name gexlogs-elasticsearch --net bridge   -v /disk2/servers-gexcloud-logs/servers/elasticsearch/data/config:/usr/share/elasticsearch/config -v /disk2/data/containers-gexcloud-logs/elasticsearch/data:/usr/share/elasticsearch/data -v /disk2/data/containers-gexcloud-logs/elasticsearch/elasticsearch_logs:/usr/share/elasticsearch/logs    --cap-add=NET_ADMIN -h elasticsearch --dns=8.8.8.8    elasticsearch:2.3.5  
+ DEBUG [af6acbd1] 	f173209195cd6916e5c7e971b3e4c34e92be0a156da3431fa38f3b51879d9e49
+running: docker network connect --ip 51.0.20.6  overlay gexlogs-elasticsearch
+ DEBUG [af6acbd1] 	
+running: docker start gexlogs-elasticsearch
+ DEBUG [af6acbd1] 	gexlogs-elasticsearch
+  INFO [af6acbd1] Finished in 2.573 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-11 18:39:01 +0300 cap main servers:rerun[zookeeper,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c832d635] Running ~/.rvm/bin/rvm version as gex@51.1.0.50
+ DEBUG [c832d635] Command: ~/.rvm/bin/rvm version
+ DEBUG [c832d635] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [c832d635] Finished in 0.525 seconds with exit status 0 (successful).
+ DEBUG [3ca4b91c] Running ~/.rvm/bin/rvm current as gex@51.1.0.50
+ DEBUG [3ca4b91c] Command: ~/.rvm/bin/rvm current
+ DEBUG [3ca4b91c] 	ruby-2.3.3
+ DEBUG [3ca4b91c] Finished in 0.305 seconds with exit status 0 (successful).
+ DEBUG [cbf00a11] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@51.1.0.50
+ DEBUG [cbf00a11] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [cbf00a11] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [cbf00a11] Finished in 0.482 seconds with exit status 0 (successful).
+ DEBUG [635fed23] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@51.1.0.50
+ DEBUG [635fed23] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [635fed23] Finished in 0.221 seconds with exit status 0 (successful).
+  INFO [8aecc244] Running /usr/bin/env hostname as gex@51.1.0.50
+ DEBUG [8aecc244] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [8aecc244] 	gexsrv
+  INFO [8aecc244] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [42ca8252] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s zookeeper ' as gex@51.1.0.50
+ DEBUG [42ca8252] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s zookeeper '
+ DEBUG [42ca8252] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container zookeeper...
+running: docker rm -f gexlogs-zookeeper 
+ DEBUG [42ca8252] 	gexlogs-zookeeper
+creating and running container..
+destroying container zookeeper...
+running: docker rm -f gexlogs-zookeeper 
+ DEBUG [42ca8252] 	Error response from daemon: No such container: gexlogs-zookeeper
+ DEBUG [42ca8252] 	
+running: docker create --name gexlogs-zookeeper --net bridge       --cap-add=NET_ADMIN -h zookeeper --dns=8.8.8.8    zookeeper:3.4.9  
+ DEBUG [42ca8252] 	e7bc7bb56641845e341d1deafe66267278b3ca2c837eca4f9f4ac0ff8ac4f43e
+running: docker network connect --ip 51.0.20.8  overlay gexlogs-zookeeper
+ DEBUG [42ca8252] 	
+running: docker start gexlogs-zookeeper
+ DEBUG [42ca8252] 	gexlogs-zookeeper
+  INFO [42ca8252] Finished in 3.136 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-11 18:39:07 +0300 cap main servers:rerun[kibana,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2d45d76b] Running ~/.rvm/bin/rvm version as gex@51.1.0.50
+ DEBUG [2d45d76b] Command: ~/.rvm/bin/rvm version
+ DEBUG [2d45d76b] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [2d45d76b] Finished in 0.470 seconds with exit status 0 (successful).
+ DEBUG [055030af] Running ~/.rvm/bin/rvm current as gex@51.1.0.50
+ DEBUG [055030af] Command: ~/.rvm/bin/rvm current
+ DEBUG [055030af] 	ruby-2.3.3
+ DEBUG [055030af] Finished in 0.253 seconds with exit status 0 (successful).
+ DEBUG [f95daf4f] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@51.1.0.50
+ DEBUG [f95daf4f] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [f95daf4f] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [f95daf4f] Finished in 0.492 seconds with exit status 0 (successful).
+ DEBUG [69818c5d] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@51.1.0.50
+ DEBUG [69818c5d] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [69818c5d] Finished in 0.225 seconds with exit status 0 (successful).
+  INFO [5e3c3367] Running /usr/bin/env hostname as gex@51.1.0.50
+ DEBUG [5e3c3367] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [5e3c3367] 	gexsrv
+  INFO [5e3c3367] Finished in 0.021 seconds with exit status 0 (successful).
+  INFO [5ccff08d] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s kibana ' as gex@51.1.0.50
+ DEBUG [5ccff08d] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s kibana '
+ DEBUG [5ccff08d] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container kibana...
+running: docker rm -f gexlogs-kibana 
+ DEBUG [5ccff08d] 	gexlogs-kibana
+creating and running container..
+destroying container kibana...
+running: docker rm -f gexlogs-kibana 
+ DEBUG [5ccff08d] 	Error response from daemon: No such container: gexlogs-kibana
+ DEBUG [5ccff08d] 	
+running: docker create --name gexlogs-kibana --net bridge   -v /disk2/data/containers-gexcloud-logs/kibana/data:/usr/share/kibana/data    --cap-add=NET_ADMIN -h kibana --dns=8.8.8.8    gexlogs-kibana /etc/bootstrap 
+ DEBUG [5ccff08d] 	77cc5ec551d98e5f8dfb95ae1d01a876fdb736371f7dc6564415086afe225656
+running: docker network connect --ip 51.0.20.7  overlay gexlogs-kibana
+ DEBUG [5ccff08d] 	
+running: docker start gexlogs-kibana
+ DEBUG [5ccff08d] 	gexlogs-kibana
+ DEBUG [5ccff08d] 	running: docker exec gexlogs-kibana sh -c 'echo "46.172.71.53 git.gex" >>  /etc/hosts'
+ DEBUG [5ccff08d] 	
+running: docker exec gexlogs-kibana sh -c 'echo "51.0.20.6 elasticsearch" >>  /etc/hosts'
+ DEBUG [5ccff08d] 	
+  INFO [5ccff08d] Finished in 2.472 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-11 18:39:11 +0300 cap main servers:rerun[kafka,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [17aced03] Running ~/.rvm/bin/rvm version as gex@51.1.0.50
+ DEBUG [17aced03] Command: ~/.rvm/bin/rvm version
+ DEBUG [17aced03] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [17aced03] Finished in 0.474 seconds with exit status 0 (successful).
+ DEBUG [261d4ed1] Running ~/.rvm/bin/rvm current as gex@51.1.0.50
+ DEBUG [261d4ed1] Command: ~/.rvm/bin/rvm current
+ DEBUG [261d4ed1] 	ruby-2.3.3
+ DEBUG [261d4ed1] Finished in 0.269 seconds with exit status 0 (successful).
+ DEBUG [c9da174e] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@51.1.0.50
+ DEBUG [c9da174e] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [c9da174e] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [c9da174e] Finished in 0.448 seconds with exit status 0 (successful).
+ DEBUG [683191f9] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@51.1.0.50
+ DEBUG [683191f9] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [683191f9] Finished in 0.229 seconds with exit status 0 (successful).
+  INFO [3bdc4124] Running /usr/bin/env hostname as gex@51.1.0.50
+ DEBUG [3bdc4124] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [3bdc4124] 	gexsrv
+  INFO [3bdc4124] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [ced96d8c] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s kafka ' as gex@51.1.0.50
+ DEBUG [ced96d8c] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s kafka '
+ DEBUG [ced96d8c] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container kafka...
+running: docker rm -f gexlogs-kafka 
+ DEBUG [ced96d8c] 	gexlogs-kafka
+creating and running container..
+destroying container kafka...
+running: docker rm -f gexlogs-kafka 
+ DEBUG [ced96d8c] 	Error response from daemon: No such container: gexlogs-kafka
+ DEBUG [ced96d8c] 	
+running: docker create --name gexlogs-kafka --net bridge   -v /var/run/docker.sock:/var/run/docker.sock -v /disk2/data/containers-gexcloud-logs/kafka/data:/kafka    --cap-add=NET_ADMIN -h kafka --dns=8.8.8.8   -e KAFKA_BROKER_ID=88 -e KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://51.0.20.9:9092 -e KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -e KAFKA_LOG_DIRS=/kafka/kafka-logs gexlogs-kafka  
+ DEBUG [ced96d8c] 	f15e7e0c5cc09c069c601f16294c2e0c7ea516c35769c769ca63b236f4654e44
+running: docker network connect --ip 51.0.20.9  overlay gexlogs-kafka
+ DEBUG [ced96d8c] 	
+running: docker start gexlogs-kafka
+ DEBUG [ced96d8c] 	gexlogs-kafka
+ DEBUG [ced96d8c] 	running: docker exec gexlogs-kafka sh -c 'echo "46.172.71.53 git.gex" >>  /etc/hosts'
+ DEBUG [ced96d8c] 	
+running: docker exec gexlogs-kafka sh -c 'echo "51.0.20.8 zookeeper" >>  /etc/hosts'
+ DEBUG [ced96d8c] 	
+  INFO [ced96d8c] Finished in 7.302 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-11 18:39:20 +0300 cap main servers:rerun[logs-fluentd-docker-containers,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [5e739549] Running ~/.rvm/bin/rvm version as gex@51.1.0.50
+ DEBUG [5e739549] Command: ~/.rvm/bin/rvm version
+ DEBUG [5e739549] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [5e739549] Finished in 0.428 seconds with exit status 0 (successful).
+ DEBUG [de80a8b7] Running ~/.rvm/bin/rvm current as gex@51.1.0.50
+ DEBUG [de80a8b7] Command: ~/.rvm/bin/rvm current
+ DEBUG [de80a8b7] 	ruby-2.3.3
+ DEBUG [de80a8b7] Finished in 0.214 seconds with exit status 0 (successful).
+ DEBUG [4d5b30aa] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@51.1.0.50
+ DEBUG [4d5b30aa] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [4d5b30aa] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [4d5b30aa] Finished in 0.349 seconds with exit status 0 (successful).
+ DEBUG [d77ec806] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@51.1.0.50
+ DEBUG [d77ec806] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [d77ec806] Finished in 0.229 seconds with exit status 0 (successful).
+  INFO [8814523c] Running /usr/bin/env hostname as gex@51.1.0.50
+ DEBUG [8814523c] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [8814523c] 	gexsrv
+  INFO [8814523c] Finished in 0.013 seconds with exit status 0 (successful).
+  INFO [9a2d8734] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-docker-containers ' as gex@51.1.0.50
+ DEBUG [9a2d8734] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-docker-containers '
+ DEBUG [9a2d8734] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container logs-fluentd-docker-containers...
+running: docker rm -f gexlogs-logs-fluentd-docker-containers 
+ DEBUG [9a2d8734] 	gexlogs-logs-fluentd-docker-containers
+creating and running container..
+destroying container logs-fluentd-docker-containers...
+running: docker rm -f gexlogs-logs-fluentd-docker-containers 
+ DEBUG [9a2d8734] 	Error response from daemon: No such container: gexlogs-logs-fluentd-docker-containers
+ DEBUG [9a2d8734] 	
+running: docker create --name gexlogs-logs-fluentd-docker-containers --net bridge  -p 24226:24226     --cap-add=NET_ADMIN -h logs-fluentd-docker-containers --dns=8.8.8.8   -e FLUENTD=fluentd -e FLUENTD_CONF_DIR=/fluentd/etc -e FLUENTD_CONF=/fluent.conf gexlogs-logs-fluentd-docker-containers /etc/bootstrap 
+ DEBUG [9a2d8734] 	39ab1b77f3d26367d0f6524ae0efd458ebb896992ff434260c8eff01a44c3c18
+running: docker network connect --ip 51.0.20.4  overlay gexlogs-logs-fluentd-docker-containers
+ DEBUG [9a2d8734] 	
+running: docker start gexlogs-logs-fluentd-docker-containers
+ DEBUG [9a2d8734] 	gexlogs-logs-fluentd-docker-containers
+ DEBUG [9a2d8734] 	running: docker exec gexlogs-logs-fluentd-docker-containers sh -c 'echo "46.172.71.53 git.gex" >>  /etc/hosts'
+ DEBUG [9a2d8734] 	
+running: docker exec gexlogs-logs-fluentd-docker-containers sh -c 'echo "51.0.20.9 kafka" >>  /etc/hosts'
+ DEBUG [9a2d8734] 	
+  INFO [9a2d8734] Finished in 7.521 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-11 18:39:30 +0300 cap main servers:rerun[logs-fluentd-servers-kafka-elastic,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a51c0b78] Running ~/.rvm/bin/rvm version as gex@51.1.0.50
+ DEBUG [a51c0b78] Command: ~/.rvm/bin/rvm version
+ DEBUG [a51c0b78] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [a51c0b78] Finished in 0.473 seconds with exit status 0 (successful).
+ DEBUG [d506eea9] Running ~/.rvm/bin/rvm current as gex@51.1.0.50
+ DEBUG [d506eea9] Command: ~/.rvm/bin/rvm current
+ DEBUG [d506eea9] 	ruby-2.3.3
+ DEBUG [d506eea9] Finished in 0.249 seconds with exit status 0 (successful).
+ DEBUG [0272cdaa] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@51.1.0.50
+ DEBUG [0272cdaa] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [0272cdaa] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [0272cdaa] Finished in 0.362 seconds with exit status 0 (successful).
+ DEBUG [5e6c3cc3] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@51.1.0.50
+ DEBUG [5e6c3cc3] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [5e6c3cc3] Finished in 0.217 seconds with exit status 0 (successful).
+  INFO [c66afd17] Running /usr/bin/env hostname as gex@51.1.0.50
+ DEBUG [c66afd17] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [c66afd17] 	gexsrv
+  INFO [c66afd17] Finished in 0.017 seconds with exit status 0 (successful).
+  INFO [516270f5] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-servers-kafka-elastic ' as gex@51.1.0.50
+ DEBUG [516270f5] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-servers-kafka-elastic '
+ DEBUG [516270f5] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container logs-fluentd-servers-kafka-elastic...
+running: docker rm -f gexlogs-logs-fluentd-servers-kafka-elastic 
+ DEBUG [516270f5] 	gexlogs-logs-fluentd-servers-kafka-elastic
+creating and running container..
+destroying container logs-fluentd-servers-kafka-elastic...
+running: docker rm -f gexlogs-logs-fluentd-servers-kafka-elastic 
+ DEBUG [516270f5] 	Error response from daemon: No such container: gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [516270f5] 	
+running: docker create --name gexlogs-logs-fluentd-servers-kafka-elastic --net bridge       --cap-add=NET_ADMIN -h logs-fluentd-servers-kafka-elastic --dns=8.8.8.8   -e FLUENTD=fluentd -e FLUENTD_CONF_DIR=/fluentd/etc -e FLUENTD_CONF=/fluent.conf gexlogs-logs-fluentd-servers-kafka-elastic /etc/bootstrap 
+ DEBUG [516270f5] 	435cfbbf93bae245890c7f5b31d1454487abe497ddf4d535714badde802f462a
+running: docker network connect --ip 51.0.20.5  overlay gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [516270f5] 	
+running: docker start gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [516270f5] 	gexlogs-logs-fluentd-servers-kafka-elastic
+ DEBUG [516270f5] 	running: docker exec gexlogs-logs-fluentd-servers-kafka-elastic sh -c 'echo "46.172.71.53 git.gex" >>  /etc/hosts'
+ DEBUG [516270f5] 	
+running: docker exec gexlogs-logs-fluentd-servers-kafka-elastic sh -c 'echo "51.0.20.6 elasticsearch" >>  /etc/hosts'
+ DEBUG [516270f5] 	
+running: docker exec gexlogs-logs-fluentd-servers-kafka-elastic sh -c 'echo "51.0.20.9 kafka" >>  /etc/hosts'
+ DEBUG [516270f5] 	
+  INFO [516270f5] Finished in 6.476 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-11 18:39:38 +0300 cap main servers:rerun[logs-fluentd-api-servers,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [3dcee9b3] Running ~/.rvm/bin/rvm version as gex@51.1.0.50
+ DEBUG [3dcee9b3] Command: ~/.rvm/bin/rvm version
+ DEBUG [3dcee9b3] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [3dcee9b3] Finished in 0.487 seconds with exit status 0 (successful).
+ DEBUG [4b4b8fad] Running ~/.rvm/bin/rvm current as gex@51.1.0.50
+ DEBUG [4b4b8fad] Command: ~/.rvm/bin/rvm current
+ DEBUG [4b4b8fad] 	ruby-2.3.3
+ DEBUG [4b4b8fad] Finished in 0.309 seconds with exit status 0 (successful).
+ DEBUG [a11b0b5c] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@51.1.0.50
+ DEBUG [a11b0b5c] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [a11b0b5c] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [a11b0b5c] Finished in 0.426 seconds with exit status 0 (successful).
+ DEBUG [03811a3c] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@51.1.0.50
+ DEBUG [03811a3c] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [03811a3c] Finished in 0.230 seconds with exit status 0 (successful).
+  INFO [3ae34286] Running /usr/bin/env hostname as gex@51.1.0.50
+ DEBUG [3ae34286] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [3ae34286] 	gexsrv
+  INFO [3ae34286] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [f627bb5e] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-api-servers ' as gex@51.1.0.50
+ DEBUG [f627bb5e] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-api-servers '
+ DEBUG [f627bb5e] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container logs-fluentd-api-servers...
+running: docker rm -f gexlogs-logs-fluentd-api-servers 
+ DEBUG [f627bb5e] 	gexlogs-logs-fluentd-api-servers
+creating and running container..
+destroying container logs-fluentd-api-servers...
+running: docker rm -f gexlogs-logs-fluentd-api-servers 
+ DEBUG [f627bb5e] 	Error response from daemon: No such container: gexlogs-logs-fluentd-api-servers
+ DEBUG [f627bb5e] 	
+running: docker create --name gexlogs-logs-fluentd-api-servers --net bridge   -v /disk2/data/containers/gex-main/api/log/nginx:/api-nginx/ -v /disk2/data/containers/gex-main/api/log/passenger:/api-passenger/ -v /disk2/data/containers/gex-main/api/log/god:/api-god/ -v /disk2/data/containers/gex-main/api/apps/apihub/shared/log:/api-apihub/    --cap-add=NET_ADMIN -h logs-fluentd-api-servers --dns=8.8.8.8   -e FLUENTD=fluentd -e FLUENTD_CONF_DIR=/fluentd/etc -e FLUENTD_CONF=/fluent.conf gexlogs-logs-fluentd-api-servers /etc/bootstrap 
+ DEBUG [f627bb5e] 	a4b8dacf3e315847049e0c5719e9af24b929fa86abefd609fab30188dc58905d
+running: docker network connect --ip 51.0.20.3  overlay gexlogs-logs-fluentd-api-servers
+ DEBUG [f627bb5e] 	
+running: docker start gexlogs-logs-fluentd-api-servers
+ DEBUG [f627bb5e] 	gexlogs-logs-fluentd-api-servers
+ DEBUG [f627bb5e] 	running: docker exec gexlogs-logs-fluentd-api-servers sh -c 'echo "46.172.71.53 git.gex" >>  /etc/hosts'
+ DEBUG [f627bb5e] 	
+running: docker exec gexlogs-logs-fluentd-api-servers sh -c 'echo "51.0.20.9 kafka" >>  /etc/hosts'
+ DEBUG [f627bb5e] 	
+  INFO [f627bb5e] Finished in 6.272 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-11 18:39:47 +0300 cap main servers:rerun[logs-fluentd-provisioner-servers,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [dbda7eb7] Running ~/.rvm/bin/rvm version as gex@51.1.0.50
+ DEBUG [dbda7eb7] Command: ~/.rvm/bin/rvm version
+ DEBUG [dbda7eb7] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [dbda7eb7] Finished in 0.441 seconds with exit status 0 (successful).
+ DEBUG [b7e89fc7] Running ~/.rvm/bin/rvm current as gex@51.1.0.50
+ DEBUG [b7e89fc7] Command: ~/.rvm/bin/rvm current
+ DEBUG [b7e89fc7] 	ruby-2.3.3
+ DEBUG [b7e89fc7] Finished in 0.233 seconds with exit status 0 (successful).
+ DEBUG [b5326819] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@51.1.0.50
+ DEBUG [b5326819] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [b5326819] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [b5326819] Finished in 0.359 seconds with exit status 0 (successful).
+ DEBUG [b360d277] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@51.1.0.50
+ DEBUG [b360d277] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [b360d277] Finished in 0.246 seconds with exit status 0 (successful).
+  INFO [9300a8c1] Running /usr/bin/env hostname as gex@51.1.0.50
+ DEBUG [9300a8c1] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [9300a8c1] 	gexsrv
+  INFO [9300a8c1] Finished in 0.015 seconds with exit status 0 (successful).
+  INFO [95ddb863] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-provisioner-servers ' as gex@51.1.0.50
+ DEBUG [95ddb863] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s logs-fluentd-provisioner-servers '
+ DEBUG [95ddb863] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container logs-fluentd-provisioner-servers...
+running: docker rm -f gexlogs-logs-fluentd-provisioner-servers 
+ DEBUG [95ddb863] 	gexlogs-logs-fluentd-provisioner-servers
+creating and running container..
+destroying container logs-fluentd-provisioner-servers...
+running: docker rm -f gexlogs-logs-fluentd-provisioner-servers 
+ DEBUG [95ddb863] 	Error response from daemon: No such container: gexlogs-logs-fluentd-provisioner-servers
+ DEBUG [95ddb863] 	
+running: docker create --name gexlogs-logs-fluentd-provisioner-servers --net bridge   -v /disk2/data/containers/gex-main/provisioner/log/sidekiq:/provisioner-sidekiq/ -v /disk2/data/containers/gex-main/provisioner/log/gush:/provisioner-gush/ -v /disk2/data/containers/gex-main/provisioner/log/god:/provisioner-god/    --cap-add=NET_ADMIN -h logs-fluentd-provisioner-servers --dns=8.8.8.8   -e FLUENTD=fluentd -e FLUENTD_CONF_DIR=/fluentd/etc -e FLUENTD_CONF=/fluent.conf gexlogs-logs-fluentd-provisioner-servers /etc/bootstrap 
+ DEBUG [95ddb863] 	5fd955ab1d2d08109729d13c00b9fa1211c41b4726879863f96ea7cbd3a38d40
+running: docker network connect --ip 51.0.20.10  overlay gexlogs-logs-fluentd-provisioner-servers
+ DEBUG [95ddb863] 	
+running: docker start gexlogs-logs-fluentd-provisioner-servers
+ DEBUG [95ddb863] 	gexlogs-logs-fluentd-provisioner-servers
+ DEBUG [95ddb863] 	running: docker exec gexlogs-logs-fluentd-provisioner-servers sh -c 'echo "46.172.71.53 git.gex" >>  /etc/hosts'
+ DEBUG [95ddb863] 	
+running: docker exec gexlogs-logs-fluentd-provisioner-servers sh -c 'echo "51.0.20.9 kafka" >>  /etc/hosts'
+ DEBUG [95ddb863] 	
+  INFO [95ddb863] Finished in 7.560 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-07-11 18:39:56 +0300 cap main servers:rerun[ntopng,0.1]
+  INFO ---------------------------------------------------------------------------
+ DEBUG [56b694a9] Running ~/.rvm/bin/rvm version as gex@51.1.0.50
+ DEBUG [56b694a9] Command: ~/.rvm/bin/rvm version
+ DEBUG [56b694a9] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [56b694a9] Finished in 0.519 seconds with exit status 0 (successful).
+ DEBUG [0002c60a] Running ~/.rvm/bin/rvm current as gex@51.1.0.50
+ DEBUG [0002c60a] Command: ~/.rvm/bin/rvm current
+ DEBUG [0002c60a] 	ruby-2.3.3
+ DEBUG [0002c60a] Finished in 0.292 seconds with exit status 0 (successful).
+ DEBUG [99ac7eb0] Running ~/.rvm/bin/rvm 2.3.3 do ruby --version as gex@51.1.0.50
+ DEBUG [99ac7eb0] Command: ~/.rvm/bin/rvm 2.3.3 do ruby --version
+ DEBUG [99ac7eb0] 	ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]
+ DEBUG [99ac7eb0] Finished in 0.384 seconds with exit status 0 (successful).
+ DEBUG [2b3d9f85] Running if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi as gex@51.1.0.50
+ DEBUG [2b3d9f85] Command: if ! sudo -u gex whoami > /dev/null; then echo "You cannot switch to user 'gex' using sudo, please check the sudoers file" 1>&2; false; fi
+ DEBUG [2b3d9f85] Finished in 0.233 seconds with exit status 0 (successful).
+  INFO [423fb09d] Running /usr/bin/env hostname as gex@51.1.0.50
+ DEBUG [423fb09d] Command: sudo -u gex -- sh -c '/usr/bin/env hostname'
+ DEBUG [423fb09d] 	gexsrv
+  INFO [423fb09d] Finished in 0.019 seconds with exit status 0 (successful).
+  INFO [a2cf2793] Running cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s ntopng ' as gex@51.1.0.50
+ DEBUG [a2cf2793] Command: cd /disk2/servers-gexcloud-logs && bash --login -c 'docker-builder up -s ntopng '
+ DEBUG [a2cf2793] 	Docker builder v.0.1.58
+running...
+config file: /disk2/servers-gexcloud-logs/config.rb
+destroying container ntopng...
+running: docker rm -f gexlogs-ntopng 
+ DEBUG [a2cf2793] 	gexlogs-ntopng
+creating and running container..
+destroying container ntopng...
+running: docker rm -f gexlogs-ntopng 
+ DEBUG [a2cf2793] 	Error response from daemon: No such container: gexlogs-ntopng
+ DEBUG [a2cf2793] 	
+running: docker create --name gexlogs-ntopng --net bridge       --privileged  gexlogs-ntopng  
+ DEBUG [a2cf2793] 	5ab03ac3390a8e2c49034a555e971e36daf56d6fe13055395fac909f20453814
+running: docker network connect --ip 51.0.20.2  overlay gexlogs-ntopng
+ DEBUG [a2cf2793] 	
+running: docker start gexlogs-ntopng
+ DEBUG [a2cf2793] 	gexlogs-ntopng
+  INFO [a2cf2793] Finished in 9.196 seconds with exit status 0 (successful).
